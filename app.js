@@ -2,19 +2,19 @@ const projects = [
     {
         title: "Bezier Curve Visualizer",
         description: "Simple bezier curve visualizer made in HTML, CSS, and JavaScript.",
-        image: "./images/bezier-curve.png",
+        image: "images/bezier-curve.png",
         url: "https://vh8t.github.io/beziercurve/"
     },
     {
         title: "CLI Hex Editor",
         description: "Simple lightweight command line hex editor made in Python.",
-        image: "./images/hex-editor.png",
+        image: "images/hex-editor.png",
         url: "https://github.com/vh8t/hex-editor"
     },
     {
         title: "CLI Speed-cube timer",
         description: "Simple command line cube timer made in Python.",
-        image: "./images/cube-timer.png",
+        image: "images/cube-timer.png",
         url: "https://github.com/vh8t/cubetimer"
     }
 ];
