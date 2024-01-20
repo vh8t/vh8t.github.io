@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    margin: 20px;
+}
+
+#about {
+    text-align: center;
+    padding: 30px;
+}
+
+#projects {
+    text-align: center;
+    padding: 30px;
+}
+
+.proj,
+#about h2,
+#about p {
+    padding-inline: 75px;
+}
+
+.project-card {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #444;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card h3,
+.project-card p {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+a {
+    color: #ccc;
+}
+
+.project-card:hover {
+    background-color: #555;
+}
