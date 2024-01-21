@@ -3,7 +3,7 @@ const projects = [
         title: "Bezier Curve Visualizer",
         description: "Simple bezier curve visualizer made in HTML, CSS, and JavaScript.",
         image: "images/bezier-curve.png",
-        url: "https://vh8t.github.io/beziercurve/"
+        url: "https://vh8t.xyz/beziercurve/"
     },
     {
         title: "CLI Hex Editor",
