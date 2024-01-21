@@ -65,3 +65,17 @@ a {
 .project-card:hover {
     background-color: #555;
 }
+
+/* Media Query for screens less than 768 pixels wide (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .proj,
+    #about h2,
+    #about p {
+        padding-inline: 20px;
+    }
+}
