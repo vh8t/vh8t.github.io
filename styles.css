@@ -17,19 +17,18 @@ section {
     margin: 20px;
 }
 
-#about {
-    text-align: center;
-    padding: 30px;
-}
-
-#projects {
+#projects,
+#about,
+#bots {
     text-align: center;
     padding: 30px;
 }
 
 .proj,
 #about h2,
-#about p {
+#about p,
+#bots h2,
+#bots p {
     padding-inline: 75px;
 }
 
@@ -58,15 +57,27 @@ section {
     text-align: center;
 }
 
-a {
+a,
+a:visited,
+a:hover,
+a:active,
+.discord {
     color: #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .project-card:hover {
     background-color: #555;
 }
 
-/* Media Query for screens less than 768 pixels wide (e.g., mobile devices) */
 @media (max-width: 768px) {
     .project-card {
         width: 100%;
@@ -75,7 +86,9 @@ a {
 
     .proj,
     #about h2,
-    #about p {
+    #about p,
+    #bots h2,
+    #bots p {
         padding-inline: 20px;
     }
 }
