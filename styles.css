@@ -89,6 +89,6 @@ button {
     #about p,
     #bots h2,
     #bots p {
-        padding-inline: 20px;
+        padding-inline: 5px;
     }
 }
