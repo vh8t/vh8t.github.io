@@ -80,7 +80,7 @@ button {
 
 @media (max-width: 768px) {
     .project-card {
-        width: 100%;
+        width: 95%;
         height: auto;
         padding: 5px;
         margin: 10px 0;
