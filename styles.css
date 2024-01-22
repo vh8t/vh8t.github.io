@@ -82,8 +82,8 @@ button {
     .project-card {
         width: 100%;
         height: auto;
-        padding: 0;
-        maggin: 0;
+        padding: 5px 0;
+        maggin: 10px 0;
     }
 
     .proj,
