@@ -82,6 +82,7 @@ button {
     .project-card {
         width: 100%;
         height: auto;
+        display: table;
     }
 
     .proj,
@@ -89,6 +90,6 @@ button {
     #about p,
     #bots h2,
     #bots p {
-        padding-inline: 0;
+        padding-inline: 5px;
     }
 }
