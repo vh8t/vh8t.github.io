@@ -80,7 +80,7 @@ button {
     .project-card {
         width: 95%;
         height: auto;
-        padding: 5px;
+        padding: 0;
         margin: 10px 0;
     }
 
