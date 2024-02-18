@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link href="styles.css" rel="stylesheet">
+    <link id="theme-css" href="theme-dark.css" rel="stylesheet">
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 
     <title>vh8t</title>
 </head>
 <body>
 
-<header>
+<header id="header">
     <div id="logo">
         <img alt="Logo" src="images/logo.png">
     </div>
@@ -45,11 +45,25 @@
     <section id="projects">
         <h2>My Projects</h2>
         <p>Welcome to my projects showcase! Below are some of my favorite creations. Feel free to explore these projects,
-            and if any catch your interest, you can find more on my <a href="https://github.com/vh8t"
-                                                                       target="_blank">GitHub</a>.</p>
+            and if any catch your interest, you can find more on my <a href="https://github.com/vh8t" target="_blank">GitHub</a>.</p>
         <div id="project-container"></div>
     </section>
+
+    <p id="hint">Click the tab bar to switch between light and dark mode.</p>
 </div>
+
+<footer id="footer">
+    <a href="https://www.instagram.com/golis.sam/" target="_blank">
+        <img alt="Instagram" id="instagram" src="images/icons/light-instagram.svg">
+    </a>
+    <a href="https://www.youtube.com/@vh8t_" target="_blank">
+        <img alt="YouTube" id="youtube" src="images/icons/light-youtube.svg">
+    </a>
+    <a href="https://github.com/vh8t" target="_blank">
+        <img alt="GitHub" id="github" src="images/icons/light-github.svg">
+    </a>
+    <p>© 2024 Samuel Golis</p>
+</footer>
 
 <script src="app.js"></script>
 
