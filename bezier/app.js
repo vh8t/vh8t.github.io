@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 const timeSlider = document.getElementById('time-slider');
 const resetButton = document.getElementById('reset-button');
 const timeLabel = document.getElementById('time-label');
+const header = document.getElementById("header");
 
 let points = [];
 
@@ -11,7 +12,7 @@ function drawBezierCurve() {
 
     if (points.length === 0) {
         ctx.font = '16px Arial';
-        ctx.fillStyle = '#fff';
+        ctx.fillStyle = '#888';
         ctx.textAlign = 'center';
         ctx.fillText('Click anywhere on canvas to place point', canvas.width / 2, canvas.height / 2);
         return;
@@ -34,14 +35,14 @@ function drawBezierCurve() {
     for (let i = 1; i < points.length; i++) {
         ctx.lineTo(points[i].x, points[i].y);
     }
-    ctx.strokeStyle = "#fff";
+    ctx.strokeStyle = "#888";
     ctx.stroke();
     ctx.closePath();
 
     for (let i = 0; i < points.length; i++) {
         ctx.beginPath();
         ctx.arc(points[i].x, points[i].y, 5, 0, Math.PI * 2);
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = "#888";
         ctx.fill();
         ctx.closePath();
     }
@@ -57,7 +58,7 @@ function drawBezierCurve() {
 
     for (let i = 0; i < points.length; i++) {
         ctx.font = '10px Arial';
-        ctx.fillStyle = '#fff';
+        ctx.fillStyle = '#888';
         ctx.textAlign = 'center';
         ctx.fillText(`(${points[i].x.toFixed(2)}, ${points[i].y.toFixed(2)})`, points[i].x, points[i].y - 10);
     }
@@ -137,3 +138,31 @@ window.addEventListener('resize', () => {
 });
 
 window.dispatchEvent(new Event('resize'));
+
+function changeTheme(theme) {
+    const linkElement = document.getElementById("theme-css");
+    if (linkElement) {
+        linkElement.href = theme;
+        localStorage.setItem("theme", theme);
+    }
+}
+
+function loadTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+        changeTheme(theme);
+    } else {
+        changeTheme('theme-dark.css');
+    }
+}
+
+header.addEventListener("click", () => {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "theme-dark.css") {
+        changeTheme("theme-light.css");
+    } else {
+        changeTheme("theme-dark.css");
+    }
+});
+
+window.onload = loadTheme;
