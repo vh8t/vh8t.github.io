@@ -10,7 +10,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         return;
     }
 
-    fetch('http://vht8.pythonanywhere.com/send', {
+    fetch('https://vht8.pythonanywhere.com/send', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
