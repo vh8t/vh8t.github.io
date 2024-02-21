@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Header styles */
 header {
     background-color: #333;
     padding: 20px;
@@ -36,7 +35,6 @@ header p {
     margin: 0 20px;
 }
 
-/* Button styles */
 button {
     padding: 10px 20px;
     background-color: #1a1a1a;
