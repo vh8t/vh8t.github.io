@@ -14,3 +14,15 @@ ol {
 ul {
     list-style-type: none;
 }
+
+button {
+    padding: 8px 24px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
