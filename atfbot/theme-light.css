@@ -70,3 +70,30 @@ button:active {
     width: 100%;
     height: 675px;
 }
+
+#versions {
+    display: flex;
+    flex-direction: column;
+}
+
+.version {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.version p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.version-actions {
+    display: flex;
+}
+
+.version-actions a {
+    margin-left: 5px;
+}
