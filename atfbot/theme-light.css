@@ -85,9 +85,15 @@ button:active {
     padding: 10px;
 }
 
-.version p {
+.version-name {
     font-weight: bold;
+    padding-left: 10px;
     margin: 0;
+}
+
+.version-info {
+    display: flex;
+    align-items: center;
 }
 
 .version-actions {
@@ -96,4 +102,36 @@ button:active {
 
 .version-actions a {
     margin-left: 5px;
+}
+
+.stable {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin: 0;
+    padding-inline: 5px;
+    color: #fff;
+}
+
+.beta {
+    background-color: #f44336;
+    border-radius: 5px;
+    margin: 0;
+    padding-inline: 5px;
+    color: #fff;
+}
+
+.experimental {
+    background-color: #ff9800;
+    border-radius: 5px;
+    margin: 0;
+    padding-inline: 5px;
+    color: #fff;
+}
+
+.outdated {
+    background-color: #9e9e9e;
+    border-radius: 5px;
+    margin: 0;
+    padding-inline: 5px;
+    color: #fff;
 }
