@@ -56,6 +56,14 @@ button:active {
     transform: translateY(2px);
 }
 
+.disabled {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: #999;
+    cursor: not-allowed;
+    margin-left: 5px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
