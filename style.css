@@ -1,0 +1,306 @@
+:root {
+    --bg-color: ;
+    --fg-color: ;
+    --fg-color-light: ;
+    --fg-color-dark: ;
+    --border-color: ;
+    --block-color: ;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+    color: var(--fg-color-dark);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+svg {
+    height: 24px;
+    width: 24px;
+    margin-inline: 5px;
+    fill: var(--fg-color-dark);
+    transition: fill 0.3s;
+}
+
+svg:hover {
+    fill: var(--fg-color-light);
+}
+
+section {
+    padding-block: 20px;
+}
+
+h2 {
+    color: var(--fg-color-dark);
+    margin: 0;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--fg-color-dark);
+}
+
+h3 {
+    color: var(--fg-color-dark);
+    margin: 0;
+    padding: 0;
+}
+
+#aboutme {
+    margin-bottom: 30px;
+}
+
+.me {
+    color: var(--fg-color-dark);
+    font-weight: bold;
+}
+
+.typing::after {
+    content: '\2588';
+    display: inline-block;
+    animation: blink 0.7s infinite alternate;
+    color: var(--block-color);
+}
+
+.typing-static::after {
+    content: '\2588';
+    display: inline-block;
+    color: var(--block-color);
+}
+
+.projects-text {
+    font-size: 1.4em;
+}
+
+.container {
+    width: 50%;
+}
+
+.aboutme-text {
+    font-size: 1.4em;
+}
+
+.logo img {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    margin-inline: 10px;
+}
+
+.whoami {
+    margin-inline: 10px;
+}
+
+.whoami p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: var(--fg-color-dark);
+}
+
+.whoami h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: var(--fg-color-dark);
+}
+
+footer p {
+    height: 20px;
+    font-size: 14px;
+    margin-inline: 5px;
+    color: var(--fg-color-dark);
+}
+
+@keyframes blink {
+    0%, 40% {
+        opacity: 0;
+    }
+    60%, 100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    display: flex;
+    padding-inline: 25px;
+}
+
+.navbar-div {
+    margin: 13px;
+}
+
+.navbar-div a {
+    color: var(--fg-color-dark);
+    font-weight: normal;
+}
+
+.navbar-div a:hover {
+    color: var(--fg-color-light);
+}
+
+.navbar > div {
+    margin-right: 20px;
+}
+
+.theme-switcher {
+    margin-left: auto;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.theme-switcher p {
+    margin-right: 10px;
+    cursor: default;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--fg-color-dark);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    bottom: 1px;
+    background-color: var(--bg-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--fg-color-dark);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px ;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    flex: 1;
+    max-width: 30%;
+    margin: 20px 20px 20px 0;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: 0.3s;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.project-card:hover {
+    border: 1px solid var(--fg-color-dark);
+    transform: translate(-1px, -2px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    padding-inline: 15px;
+    margin: 10px 0;
+    color: var(--fg-color-dark);
+    position: relative;
+    z-index: 2;
+    border-left: 5px solid var(--fg-color-dark);
+    padding-left: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    padding: 15px;
+    margin: 0;
+    color: var(--fg-color-dark);
+    position: relative;
+    z-index: 2;
+}
+
+#contactme {
+    margin: 0;
+}
+
+.contactme-text {
+    font-size: 1.4em;
+}
