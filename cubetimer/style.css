@@ -75,7 +75,6 @@ h1 {
 }
 
 .stats {
-    /* make in top left corner */
     position: absolute;
     top: 0;
     left: 0;
@@ -119,12 +118,8 @@ h1 {
     color: #ff6961;
 }
 
-.footer {
+footer {
     position: absolute;
     bottom: 0;
-    margin: 30px;
-    color: var(--fg-color-dark);
-    background-color: var(--bg-color-dark);
-    padding: 10px;
-    border-radius: 5px;
+    margin: 20px;
 }
