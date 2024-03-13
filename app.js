@@ -7,11 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
         setTheme("dark");
     }
 
-    const themeLabel = document.querySelector(".theme-switcher p");
-    themeLabel.textContent = `${theme === "light" ? "Light" : "Dark"} Mode`;
+    const themeLabel = document.querySelectorAll(".theme-switcher p");
+    themeLabel.forEach((label) => {
+        label.textContent = `${theme === "light" ? "Light" : "Dark"} Mode`;
+    });
 
-    const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.addEventListener("click", toggleTheme);
+    const themeToggle = document.querySelectorAll(".theme-toggle");
+    themeToggle.forEach((toggle) => {
+        toggle.addEventListener("click", toggleTheme);
+    });
 
     const name = document.getElementById("name");
     const nameText = "Samuel Golis";
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cubetimer.addEventListener("click", () => {
         // window.location.href = "./p/cubetimer";
-        window.location.href = "https://github.com/vh8t/cubetimer";
+        window.location.href = "./cubetimer";
     });
 
     hexeditor.addEventListener("click", () => {
@@ -51,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
         // window.location.href = "./p/beziercurve";
         window.location.href = "./beziercurve";
     });
+
+    const hamburger = document.getElementById("hamburger");
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("change");
+        const mobile = document.getElementById("mobile");
+        mobile.classList.toggle("change");
+    });
 });
 
 function toggleTheme() {
@@ -58,8 +69,10 @@ function toggleTheme() {
     const newTheme = theme === "dark" ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
-    const themeLabel = document.querySelector(".theme-switcher p");
-    themeLabel.textContent = `${newTheme === "dark" ? "Dark" : "Light"} Mode`;
+    const themeLabel = document.querySelectorAll(".theme-switcher p");
+    themeLabel.forEach((label) => {
+        label.textContent = `${newTheme === "light" ? "Light" : "Dark"} Mode`;
+    });
 }
 
 function setTheme(theme) {
