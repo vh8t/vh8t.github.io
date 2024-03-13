@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cubetimer.addEventListener("click", () => {
         // window.location.href = "./p/cubetimer";
-        window.open("./cubetimer", "_blank");
+        window.location.href = "./cubetimer";
     });
 
     hexeditor.addEventListener("click", () => {
