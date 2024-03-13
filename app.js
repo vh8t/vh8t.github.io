@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const themeLabel = document.querySelector(".theme-switcher p");
-    themeLabel.textContent = `${theme === "dark" ? "Dark" : "Light"} Mode`;
+    themeLabel.textContent = `${theme === "light" ? "Light" : "Dark"} Mode`;
 
     const themeToggle = document.getElementById("theme-toggle");
     themeToggle.addEventListener("click", toggleTheme);
