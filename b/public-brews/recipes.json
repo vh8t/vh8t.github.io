@@ -1,0 +1,2591 @@
+{
+    "Wheatbeer": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 2,
+        "barrel_type": "Birch",
+        "rarity": "base"
+    },
+    "Beer": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 3,
+        "barrel_type": "Any",
+        "rarity": "base"
+    },
+    "Barkbeer": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 8,
+        "barrel_type": "Dark Oak",
+        "rarity": "base"
+    },
+    "Red Wine": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Sweet_Berries"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 20,
+        "barrel_type": "Any",
+        "rarity": "base"
+    },
+    "Mead": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Sugar_Cane"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 4,
+        "barrel_type": "Oak",
+        "rarity": "base"
+    },
+    "Sweet Apple Mead": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Apple"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 4,
+        "barrel_type": "Oak",
+        "rarity": "base"
+    },
+    "Apple Cider": {
+        "ingredients": [
+            {
+                "amount": "14",
+                "ingredient": "Apple"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 3,
+        "barrel_type": "Any",
+        "rarity": "base"
+    },
+    "Apple Liquor": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Apple"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 3,
+        "aging_time": 6,
+        "barrel_type": "Acacia",
+        "rarity": "base"
+    },
+    "Whiskey": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 2,
+        "aging_time": 18,
+        "barrel_type": "Spruce",
+        "rarity": "base"
+    },
+    "Rum": {
+        "ingredients": [
+            {
+                "amount": "18",
+                "ingredient": "Sugar_Cane"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 2,
+        "aging_time": 14,
+        "barrel_type": "Oak",
+        "rarity": "base"
+    },
+    "Vodka": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Potato"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 3,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Shroom Vodka": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Potato"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Red_Mushroom"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Brown_Mushroom"
+            }
+        ],
+        "boiling_time": 18,
+        "distill_runs": 5,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Gin": {
+        "ingredients": [
+            {
+                "amount": "9",
+                "ingredient": "Wheat"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Blue_Flowers"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Apple"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 2,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Tequila": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Cactus"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 2,
+        "aging_time": 12,
+        "barrel_type": "Birch",
+        "rarity": "base"
+    },
+    "Absinthe": {
+        "ingredients": [
+            {
+                "amount": "15",
+                "ingredient": "Grass"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Green Absinthe": {
+        "ingredients": [
+            {
+                "amount": "17",
+                "ingredient": "Grass"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Poisonous_Potato"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Potato Soup": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Potato"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Grass"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Coffee": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            }
+        ],
+        "boiling_time": 2,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "base"
+    },
+    "Eggnog": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Egg"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Milk_Bucket"
+            }
+        ],
+        "boiling_time": 2,
+        "distill_runs": 0,
+        "aging_time": 3,
+        "barrel_type": "Any",
+        "rarity": "base"
+    },
+    "Strawberry Margarita": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Tequila"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Orange"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Lime"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Strawberry Milk": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Chocolate Milk": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Cookie"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Blueberry Margarita": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Blueberry"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Tequila"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Orange"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Lime"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Mango Smoothie": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Mango"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Ice"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Orange Juice": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Orange"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Blueberry Juice": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Blueberry"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Lemonade": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Lemon"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Honey_Bottle"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Ice"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Chorus Rum": {
+        "ingredients": [
+            {
+                "amount": "22",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Chorus_Fruit"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 14,
+        "barrel_type": "Warped",
+        "rarity": "common"
+    },
+    "Rose Quartz Wine": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Rose_Bush"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Sweet_Berries"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Quartz"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 20,
+        "barrel_type": "Oak",
+        "rarity": "common"
+    },
+    "Pineapple Juice": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Pineapple"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Lilac Tea": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Lilac"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Tealeaf"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Honey_Bottle"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Amethyst Vodka": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Amethyst_Shard"
+            },
+            {
+                "amount": "15",
+                "ingredient": "Potato"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 5,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Cactus Juice": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Cactus"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Sugar_Cane"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Dr. Spicey": {
+        "ingredients": [
+            {
+                "amount": "9",
+                "ingredient": "Dark_Oak_Leaves"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Cocoa_Beans"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Caramel Frappe": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Ice"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Snowball"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Sugar"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Pumpkin Spice Latte": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Pumpkin"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Ice"
+            }
+        ],
+        "boiling_time": 11,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Jack-O-Brandy": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Red_Wine"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Carved_Pumpkin"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Apple"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 5,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Apple Cinnamon Tea": {
+        "ingredients": [
+            {
+                "amount": "11",
+                "ingredient": "Apple"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Stick"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Honey_Bottle"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Cosmopolitan": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Vodka"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Cranberry"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Lime"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Martini": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Gin"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Lemon"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Fizzy Soda": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Coal"
+            },
+            {
+                "amount": "14",
+                "ingredient": "Sugar"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Spritz": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Wine"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Ice"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Orange"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Mimosa": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Orange_Juice"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Champagne"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Cherry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Orange"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Champagne": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Wheat"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Grape"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 20,
+        "barrel_type": "Any",
+        "rarity": "common"
+    },
+    "Tom Collins": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Gin"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Lemonade"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Strawberry Shake": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Ice"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Snowball"
+            }
+        ],
+        "boiling_time": 2,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Chocolate Shake": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Ice"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Snowball"
+            }
+        ],
+        "boiling_time": 2,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "common"
+    },
+    "Winter Mint Rum": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Rum"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Spruce_Leaves"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Blue_Ice"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 0,
+        "aging_time": 2,
+        "barrel_type": "Dark Oak",
+        "rarity": "common"
+    },
+    "Octo-Smoothie": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Cherry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Lemon"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Dragonfruit"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Blueberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Lime"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Plum"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Grape"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Packed_Ice"
+            }
+        ],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Octo-Wine": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Cherry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Lemon"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Dragonfruit"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Blueberry"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Lime"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Plum"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Grape"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Sweet_Berries"
+            }
+        ],
+        "boiling_time": 14,
+        "distill_runs": 0,
+        "aging_time": 22,
+        "barrel_type": "Any",
+        "rarity": "uncommon"
+    },
+    "Wind Elixir": {
+        "ingredients": [
+            {
+                "amount": "7",
+                "ingredient": "White_Wool"
+            },
+            {
+                "amount": "7",
+                "ingredient": "String"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Grass"
+            }
+        ],
+        "boiling_time": 14,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Sparklestride Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Blue_Orchid"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Diamond"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 4,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Squid Vodka": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Ink_Sac"
+            },
+            {
+                "amount": "18",
+                "ingredient": "Potato"
+            }
+        ],
+        "boiling_time": 22,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Glow Squid Vodka": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Glow_Ink_Sac"
+            },
+            {
+                "amount": "18",
+                "ingredient": "Potato"
+            }
+        ],
+        "boiling_time": 22,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Sparkling Water": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Diamond"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Emerald"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Spectral Ale": {
+        "ingredients": [
+            {
+                "amount": "9",
+                "ingredient": "Wheat"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Glowstone_Dust"
+            },
+            {
+                "amount": "12",
+                "ingredient": "Spectral_Arrow"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 8,
+        "barrel_type": "Birch",
+        "rarity": "uncommon"
+    },
+    "Plum Whiskey": {
+        "ingredients": [
+            {
+                "amount": "22",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Plum"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 2,
+        "aging_time": 16,
+        "barrel_type": "Spruce",
+        "rarity": "uncommon"
+    },
+    "Warped Wine": {
+        "ingredients": [
+            {
+                "amount": "7",
+                "ingredient": "Sweet_Berries"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Warped_Fungus"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Warped_Roots"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 22,
+        "barrel_type": "Warped",
+        "rarity": "uncommon"
+    },
+    "Crimson Wine": {
+        "ingredients": [
+            {
+                "amount": "7",
+                "ingredient": "Sweet_Berries"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Crimson_Fungus"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Crimson_Roots"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 22,
+        "barrel_type": "Crimson",
+        "rarity": "uncommon"
+    },
+    "Cryogenic Elixir": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Blue_Ice"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Snow"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 3,
+        "aging_time": 3,
+        "barrel_type": "Birch",
+        "rarity": "uncommon"
+    },
+    "Scorched Ether": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Magma_Block"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Magma_Cream"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 4,
+        "aging_time": 6,
+        "barrel_type": "Birch",
+        "rarity": "uncommon"
+    },
+    "Lifeforce Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Redstone"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Lapis_Lazuli"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Amethyst_Shard"
+            }
+        ],
+        "boiling_time": 14,
+        "distill_runs": 5,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Thorns Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Cactus"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Pointed_Dripstone"
+            }
+        ],
+        "boiling_time": 20,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Leadership Brew": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Red_Banner"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Blue_Banner"
+            }
+        ],
+        "boiling_time": 13,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Emerald Rum": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Emerald"
+            },
+            {
+                "amount": "21",
+                "ingredient": "Sugar_Cane"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 0,
+        "aging_time": 17,
+        "barrel_type": "Oak",
+        "rarity": "uncommon"
+    },
+    "Tomato Soup": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Tomato"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Glowberry Juice": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Glow_Berries"
+            }
+        ],
+        "boiling_time": 5,
+        "distill_runs": 2,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Twisted Vodka": {
+        "ingredients": [
+            {
+                "amount": "17",
+                "ingredient": "Potato"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Twisting_Vines"
+            }
+        ],
+        "boiling_time": 20,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Ghostly Liquor": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Ghast_Tear"
+            },
+            {
+                "amount": "18",
+                "ingredient": "Gunpowder"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Bonemeal"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 2,
+        "aging_time": 5,
+        "barrel_type": "Birch",
+        "rarity": "uncommon"
+    },
+    "Meaty Gin": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Raw_Chicken"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Raw_Beef"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Raw_Porkchop"
+            },
+            {
+                "amount": "12",
+                "ingredient": "Sugar_Cane"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 3,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Witch Brew": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Spider_Eye"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Lime_Dye"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Blaze_Powder"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "uncommon"
+    },
+    "Spiced Pink Lemonade": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Lemonade"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Cranberry"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Gold_Ingot"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Sour Plum Lemonade": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Lemonade"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Plum"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Iron_Ingot"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Salty Blue Lemonade": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Lemonade"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Blueberry"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Lapis_Lazuli"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Bitter Lime Lemonade": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Lemonade"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Lime"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Emerald"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Sweet Red Lemonade": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Lemonade"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Cherry"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Redstone"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Dunesplicer Brew": {
+        "ingredients": [
+            {
+                "amount": "32",
+                "ingredient": "Sand"
+            },
+            {
+                "amount": "32",
+                "ingredient": "Soul_Sand"
+            }
+        ],
+        "boiling_time": 18,
+        "distill_runs": 4,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Guardians Blessing": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Prismarine_Crystals"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Prismarine_Shards"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Dolphin Essence": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Raw_Cod"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Seagrass"
+            },
+            {
+                "amount": "32",
+                "ingredient": "Kelp"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Valkyrie Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Feather"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Gold_Block"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Charm Potion": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Emerald"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 2,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Defender Potion": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Iron_Block"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Iron_Helmet"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Iron_Sword"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Rage Potion": {
+        "ingredients": [
+            {
+                "amount": "48",
+                "ingredient": "Rotten_Flesh"
+            },
+            {
+                "amount": "48",
+                "ingredient": "Bone"
+            },
+            {
+                "amount": "48",
+                "ingredient": "Spider_Eye"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Wrath Potion": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Wither_Skeleton_Skull"
+            },
+            {
+                "amount": "48",
+                "ingredient": "Gunpowder"
+            },
+            {
+                "amount": "48",
+                "ingredient": "Blaze_Rod"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Vegetable Beef Soup": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Tomato"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Potato"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Carrot"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Cooked_Beef"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Frostbitten Whiskey": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Blue_Ice"
+            },
+            {
+                "amount": "9",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 2,
+        "aging_time": 14,
+        "barrel_type": "Spruce",
+        "rarity": "rare"
+    },
+    "Hellfire Brandy": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Magma_Cream"
+            },
+            {
+                "amount": "10",
+                "ingredient": "Wheat"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Blaze_Rod"
+            }
+        ],
+        "boiling_time": 13,
+        "distill_runs": 4,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Ender Mead": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Ender_Pearl"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Dragon_Breath"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 0,
+        "aging_time": 6,
+        "barrel_type": "Spruce",
+        "rarity": "rare"
+    },
+    "Prespective Potion": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Gunpowder"
+            },
+            {
+                "amount": "10",
+                "ingredient": "Spider_Eye"
+            },
+            {
+                "amount": "10",
+                "ingredient": "Ender_Pearl"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Troll Potion": {
+        "ingredients": [
+            {
+                "amount": "20",
+                "ingredient": "Stone"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Golden_Carrot"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Cocoa_Beans"
+            }
+        ],
+        "boiling_time": 8,
+        "distill_runs": 3,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Black Wine": {
+        "ingredients": [
+            {
+                "amount": "9",
+                "ingredient": "Blackberry"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Wither_Rose"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 0,
+        "aging_time": 27,
+        "barrel_type": "Dark Oak",
+        "rarity": "rare"
+    },
+    "Bulwark Potion": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Shield"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Iron_Ingot"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Oak_Planks"
+            }
+        ],
+        "boiling_time": 11,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Skyline Potion": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "Feather"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Shulker_Shell"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 2,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Stone Eater Potion": {
+        "ingredients": [
+            {
+                "amount": "64",
+                "ingredient": "Stone"
+            },
+            {
+                "amount": "16",
+                "ingredient": "Raw_Iron"
+            },
+            {
+                "amount": "16",
+                "ingredient": "Raw_Gold"
+            }
+        ],
+        "boiling_time": 22,
+        "distill_runs": 4,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Lifeline Potion": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Nether_Star"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Phantom_Membrane"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Strawberry"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Flask of Fireworks": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Firework_Star"
+            },
+            {
+                "amount": "9",
+                "ingredient": "Paper"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Diamond"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Gold_Nugget"
+            }
+        ],
+        "boiling_time": 22,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Potion of Soberness": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Ghast_Tear"
+            },
+            {
+                "amount": "12",
+                "ingredient": "Lapis_Lazuli"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Diamond"
+            }
+        ],
+        "boiling_time": 7,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Cloudwalker Ether": {
+        "ingredients": [
+            {
+                "amount": "10",
+                "ingredient": "String"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Gray_Wool"
+            }
+        ],
+        "boiling_time": 9,
+        "distill_runs": 0,
+        "aging_time": 2,
+        "barrel_type": "Any",
+        "rarity": "rare"
+    },
+    "Viel of Good Fortune": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Gold_Block"
+            },
+            {
+                "amount": "9",
+                "ingredient": "Gold_Nugget"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Emerald"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Diamond"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Golem Draught": {
+        "ingredients": [
+            {
+                "amount": "32",
+                "ingredient": "Stone_Brick"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Iron_Block"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Gold_Block"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Diamond"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Calcium Potion": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "36",
+                "ingredient": "Bonemeal"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "128 Rotten_Flesh": {
+        "ingredients": [],
+        "boiling_time": 3,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Dragon Ether": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Dragon_Head"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Dragon_Breath"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Obsidian"
+            }
+        ],
+        "boiling_time": 32,
+        "distill_runs": 0,
+        "aging_time": 18,
+        "barrel_type": "Warped",
+        "rarity": "rare"
+    },
+    "Demonic Rage Potion": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Rage_Potion"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Nether_Star"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Holy Wrath Potion": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Wrath_Potion"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Nether_Star"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Potion of Sol": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "White_Wool"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Feather"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Leather"
+            }
+        ],
+        "boiling_time": 14,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Potion of Luna": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Phantom_Membrane"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Gunpowder"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Stone"
+            }
+        ],
+        "boiling_time": 14,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Hunter Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Bone"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Ender_Pearl"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Glow_Berries"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Potion of Glowing": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Glow_Berries"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Glow_Ink_Sac"
+            },
+            {
+                "amount": "8",
+                "ingredient": "GLowstone_Dust"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Ninja Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Cobweb"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Black_Wool"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Wisdom Potion": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Bookshelf"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Nether_Star"
+            }
+        ],
+        "boiling_time": 20,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Distilled Chaos": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Shulker_Shell"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Dragon_Breath"
+            },
+            {
+                "amount": "2",
+                "ingredient": "Nether_Star"
+            }
+        ],
+        "boiling_time": 25,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Astral Elixir": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Diorite"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Dragonfruit"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Cat Essence": {
+        "ingredients": [
+            {
+                "amount": "6",
+                "ingredient": "Black_Wool"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Rabbit_Foot"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Gunpowder"
+            }
+        ],
+        "boiling_time": 6,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "rare"
+    },
+    "Post-Mortal Spirits": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Totem_of_Undying"
+            },
+            {
+                "amount": "32",
+                "ingredient": "Emerald"
+            }
+        ],
+        "boiling_time": 18,
+        "distill_runs": 9,
+        "aging_time": 72,
+        "barrel_type": "Any",
+        "rarity": "legendary"
+    },
+    "Countdown Omen": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Wither_Skeleton_Skull"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Nether_Star"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Beetroot_Soup"
+            }
+        ],
+        "boiling_time": 66,
+        "distill_runs": 6,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Honey-Azalea Extract": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Honey_Block"
+            },
+            {
+                "amount": "16",
+                "ingredient": "Azalea_Leaves"
+            }
+        ],
+        "boiling_time": 12,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Ghastly Tonic": {
+        "ingredients": [
+            {
+                "amount": "12",
+                "ingredient": "Ghast_Tear"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Glow_Ink_Sac"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Ascendant Root Beer": {
+        "ingredients": [
+            {
+                "amount": "22",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Nether_Star"
+            }
+        ],
+        "boiling_time": 26,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Floral Concotion": {
+        "ingredients": [
+            {
+                "amount": "4",
+                "ingredient": "Rose_Bush"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Lilac"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Sunflower"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Peony"
+            },
+            {
+                "amount": "16",
+                "ingredient": "Lapis_Lazuli"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Mana Stabilizer": {
+        "ingredients": [
+            {
+                "amount": "2",
+                "ingredient": "Diamond_Block"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Laps_Block"
+            },
+            {
+                "amount": "16",
+                "ingredient": "Blaze_Rod"
+            }
+        ],
+        "boiling_time": 22,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Venus Nectar": {
+        "ingredients": [
+            {
+                "amount": "9",
+                "ingredient": "Jungle_Leaves"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Honey_Bottle"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Dragonfruit"
+            }
+        ],
+        "boiling_time": 13,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Quint-Shot Espresso": {
+        "ingredients": [
+            {
+                "amount": "1",
+                "ingredient": "Milk_Bucket"
+            },
+            {
+                "amount": "12",
+                "ingredient": "Cocoa_Beans"
+            },
+            {
+                "amount": "24",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "6",
+                "ingredient": "Packed_Ice"
+            }
+        ],
+        "boiling_time": 15,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Liquid Diamond": {
+        "ingredients": [
+            {
+                "amount": "20",
+                "ingredient": "Diamond"
+            },
+            {
+                "amount": "7",
+                "ingredient": "Lapis_Lazuli"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Warped_Wart_Block"
+            }
+        ],
+        "boiling_time": 19,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Prismatic Lemonade": {
+        "ingredients": [
+            {
+                "amount": "8",
+                "ingredient": "Strawberry"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Blueberry"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Cranberry"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Grape"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Pineapple"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Cherry"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Blackberry"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Plum"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Banana_Bunch"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Dragonfruit"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Lime"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Lemon"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Orange"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Mango"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Apple"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Sweet_Berries"
+            }
+        ],
+        "boiling_time": 16,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Divine Whiskey": {
+        "ingredients": [
+            {
+                "amount": "5",
+                "ingredient": "Nether_Wart"
+            },
+            {
+                "amount": "24",
+                "ingredient": "Wheat"
+            }
+        ],
+        "boiling_time": 10,
+        "distill_runs": 4,
+        "aging_time": 23,
+        "barrel_type": "Spruce",
+        "rarity": "legendary"
+    },
+    "Tonic of Precision": {
+        "ingredients": [
+            {
+                "amount": "32",
+                "ingredient": "Spectral_Arrow"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Feather"
+            },
+            {
+                "amount": "4",
+                "ingredient": "Bullseye"
+            }
+        ],
+        "boiling_time": 20,
+        "distill_runs": 0,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Fireball Cocktail": {
+        "ingredients": [
+            {
+                "amount": "22",
+                "ingredient": "Sugar_Cane"
+            },
+            {
+                "amount": "8",
+                "ingredient": "Fire_Charge"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Ghast_Tear"
+            }
+        ],
+        "boiling_time": 13,
+        "distill_runs": 2,
+        "aging_time": 15,
+        "barrel_type": "Spruce",
+        "rarity": "legendary"
+    },
+    "Spacefaring Potion": {
+        "ingredients": [
+            {
+                "amount": "16",
+                "ingredient": "Feather"
+            },
+            {
+                "amount": "64",
+                "ingredient": "Sugar"
+            },
+            {
+                "amount": "1",
+                "ingredient": "Shulker_Shell"
+            }
+        ],
+        "boiling_time": 4,
+        "distill_runs": 12,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    },
+    "Super-Distilled Chaos": {
+        "ingredients": [
+            {
+                "amount": "3",
+                "ingredient": "Distilled_Chaos"
+            },
+            {
+                "amount": "5",
+                "ingredient": "Nether_Star"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Cranberry"
+            },
+            {
+                "amount": "3",
+                "ingredient": "Dragonfruit"
+            }
+        ],
+        "boiling_time": 19,
+        "distill_runs": 26,
+        "aging_time": 0,
+        "barrel_type": "None",
+        "rarity": "legendary"
+    }
+}
