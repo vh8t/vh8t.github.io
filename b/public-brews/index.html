@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../asstes/favicon.png" type="image/x-icon">
+    <title>vh8t - lilac brews</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="hint">
+        <p class="base-brew">Default brews</p>
+        <p class="common-brew">Common brews</p>
+        <p class="uncommon-brew">Uncommon brews</p>
+        <p class="rare-brew">Rare brews</p>
+        <p class="legendary-brew">Legendary brews</p>
+    </div>
+
+    <p class="header">
+        This website is a collection of all the publicly available brew recipes on the minecraft server <a href="https://lilacmc.net/" style="padding-left: 5px;">Lilac MC</a>. This project was made by vh8t (VH8T) and is open source and can be found on <a href="https://github.com/vh8t/lilac-brews" style="padding-left: 5px;">GitHub</a>.
+        If you want to contribute to this project by adding new brews or updating existing ones, you can do so by creating a pull request on the GitHub repository or by contacting me on discord (vh8t).
+    </p>
+
+    <div class="controls">
+        <select id="rarity" onchange="filterBrews()">
+            <option value="all">All</option>
+            <option value="base">Base</option>
+            <option value="common">Common</option>
+            <option value="uncommon">Uncommon</option>
+            <option value="rare">Rare</option>
+            <option value="legendary">Legendary</option>
+        </select>
+        <input type="text" id="search" placeholder="Search for a brew...">
+        <button id="searchButton" onclick="searchBrew()">Search</button>
+    </div>
+
+    <div class="brews"></div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
