@@ -72,6 +72,7 @@ function loadBrew(brewName, brew) {
     const agingTime = brew.aging_time;
     const barrelType = brew.barrel_type;
     const rarity = brew.rarity;
+    const credits = brew.credits;
 
     const brews = document.querySelector(".brews");
     const brewDiv = document.createElement("div");
@@ -127,6 +128,13 @@ function loadBrew(brewName, brew) {
         barrelTypeDiv.classList.add("barrel-type");
         barrelTypeDiv.innerHTML = `<span class="subheader">Barrel:</span> ${barrelType}`;
         brewDiv.appendChild(barrelTypeDiv);
+    }
+
+    if (credits !== "") {
+        const creditsDiv = document.createElement("div");
+        creditsDiv.classList.add("credits");
+        creditsDiv.textContent = `Credits: ${credits}`;
+        brewDiv.appendChild(creditsDiv);
     }
 
     brews.appendChild(brewDiv);

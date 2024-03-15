@@ -57,9 +57,10 @@ h3 {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 12px 20px;
     margin: 8px 0;
+    margin-inline: 20px;
     box-sizing: border-box;
     border: 2px solid var(--border-color);
     border-radius: 4px;
@@ -74,9 +75,10 @@ input[type="text"]:focus {
 }
 
 select {
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 12px 20px;
     margin: 0;
+    margin-inline: 20px;
     box-sizing: border-box;
     border: 2px solid var(--border-color);
     border-radius: 4px;
@@ -86,8 +88,9 @@ select {
 }
 
 button {
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 5px 10px;
+    margin-inline: 20px;
     border-radius: 5px;
     cursor: pointer;
     background-color: var(--bg-color);
@@ -171,6 +174,12 @@ button:active {
     margin: 10px 0 0;
 }
 
+.distill-runs {
+    color: var(--fg-color-dark);
+    font-size: 14px;
+    margin: 0;
+}
+
 .aging-time {
     color: var(--fg-color-dark);
     font-size: 14px;
@@ -215,20 +224,25 @@ button:active {
 }
 
 .hint {
-    position: absolute;
-    top: 0;
-    left: 0;
     padding: 20px;
     margin: 20px;
     background-color: var(--bg-color);
     color: var(--fg-color);
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    z-index: 1;
 }
 
 .hint p {
     margin: 3px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100%;
 }
 
 .base-brew::before {
@@ -284,4 +298,59 @@ button:active {
     background-color: var(--legendary-color);
     margin-right: 5px;
     border: 1px solid var(--fg-color);
+}
+
+.credits {
+    color: var(--fg-color-dark);
+    margin-top: 5px;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .brew {
+        width: 20%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .brew {
+        width: 25%;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .brew {
+        width: 50%;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .brew {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
 }

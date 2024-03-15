@@ -10,7 +10,8 @@
         "distill_runs": 0,
         "aging_time": 2,
         "barrel_type": "Birch",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Beer": {
         "ingredients": [
@@ -23,7 +24,8 @@
         "distill_runs": 0,
         "aging_time": 3,
         "barrel_type": "Any",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Barkbeer": {
         "ingredients": [
@@ -36,7 +38,8 @@
         "distill_runs": 0,
         "aging_time": 8,
         "barrel_type": "Dark Oak",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Red Wine": {
         "ingredients": [
@@ -49,7 +52,8 @@
         "distill_runs": 0,
         "aging_time": 20,
         "barrel_type": "Any",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Mead": {
         "ingredients": [
@@ -62,7 +66,8 @@
         "distill_runs": 0,
         "aging_time": 4,
         "barrel_type": "Oak",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Sweet Apple Mead": {
         "ingredients": [
@@ -79,7 +84,8 @@
         "distill_runs": 0,
         "aging_time": 4,
         "barrel_type": "Oak",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Apple Cider": {
         "ingredients": [
@@ -92,7 +98,8 @@
         "distill_runs": 0,
         "aging_time": 3,
         "barrel_type": "Any",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Apple Liquor": {
         "ingredients": [
@@ -105,7 +112,8 @@
         "distill_runs": 3,
         "aging_time": 6,
         "barrel_type": "Acacia",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Whiskey": {
         "ingredients": [
@@ -118,7 +126,8 @@
         "distill_runs": 2,
         "aging_time": 18,
         "barrel_type": "Spruce",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Rum": {
         "ingredients": [
@@ -131,7 +140,8 @@
         "distill_runs": 2,
         "aging_time": 14,
         "barrel_type": "Oak",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Vodka": {
         "ingredients": [
@@ -144,7 +154,8 @@
         "distill_runs": 3,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Shroom Vodka": {
         "ingredients": [
@@ -165,7 +176,8 @@
         "distill_runs": 5,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Gin": {
         "ingredients": [
@@ -186,7 +198,8 @@
         "distill_runs": 2,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Tequila": {
         "ingredients": [
@@ -199,7 +212,8 @@
         "distill_runs": 2,
         "aging_time": 12,
         "barrel_type": "Birch",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Absinthe": {
         "ingredients": [
@@ -212,7 +226,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Green Absinthe": {
         "ingredients": [
@@ -229,7 +244,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Potato Soup": {
         "ingredients": [
@@ -246,7 +262,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Coffee": {
         "ingredients": [
@@ -263,7 +280,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Eggnog": {
         "ingredients": [
@@ -284,7 +302,8 @@
         "distill_runs": 0,
         "aging_time": 3,
         "barrel_type": "Any",
-        "rarity": "base"
+        "rarity": "base",
+        "credits": ""
     },
     "Strawberry Margarita": {
         "ingredients": [
@@ -309,7 +328,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Strawberry Milk": {
         "ingredients": [
@@ -326,7 +346,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Chocolate Milk": {
         "ingredients": [
@@ -347,7 +368,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Blueberry Margarita": {
         "ingredients": [
@@ -372,7 +394,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Mango Smoothie": {
         "ingredients": [
@@ -389,7 +412,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Orange Juice": {
         "ingredients": [
@@ -402,7 +426,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Blueberry Juice": {
         "ingredients": [
@@ -415,7 +440,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Lemonade": {
         "ingredients": [
@@ -440,7 +466,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Chorus Rum": {
         "ingredients": [
@@ -457,7 +484,8 @@
         "distill_runs": 0,
         "aging_time": 14,
         "barrel_type": "Warped",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Rose Quartz Wine": {
         "ingredients": [
@@ -478,7 +506,8 @@
         "distill_runs": 0,
         "aging_time": 20,
         "barrel_type": "Oak",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Pineapple Juice": {
         "ingredients": [
@@ -491,7 +520,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Lilac Tea": {
         "ingredients": [
@@ -512,7 +542,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Amethyst Vodka": {
         "ingredients": [
@@ -529,7 +560,8 @@
         "distill_runs": 5,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Cactus Juice": {
         "ingredients": [
@@ -546,7 +578,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Dr. Spicey": {
         "ingredients": [
@@ -567,7 +600,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Caramel Frappe": {
         "ingredients": [
@@ -592,7 +626,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Pumpkin Spice Latte": {
         "ingredients": [
@@ -613,7 +648,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Jack-O-Brandy": {
         "ingredients": [
@@ -634,7 +670,8 @@
         "distill_runs": 5,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Apple Cinnamon Tea": {
         "ingredients": [
@@ -655,7 +692,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Cosmopolitan": {
         "ingredients": [
@@ -676,7 +714,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Martini": {
         "ingredients": [
@@ -693,7 +732,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Fizzy Soda": {
         "ingredients": [
@@ -710,7 +750,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Spritz": {
         "ingredients": [
@@ -731,7 +772,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Mimosa": {
         "ingredients": [
@@ -756,7 +798,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Champagne": {
         "ingredients": [
@@ -777,7 +820,8 @@
         "distill_runs": 0,
         "aging_time": 20,
         "barrel_type": "Any",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Tom Collins": {
         "ingredients": [
@@ -798,7 +842,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Strawberry Shake": {
         "ingredients": [
@@ -823,7 +868,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Chocolate Shake": {
         "ingredients": [
@@ -848,7 +894,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Winter Mint Rum": {
         "ingredients": [
@@ -869,7 +916,8 @@
         "distill_runs": 0,
         "aging_time": 2,
         "barrel_type": "Dark Oak",
-        "rarity": "common"
+        "rarity": "common",
+        "credits": "ooah"
     },
     "Octo-Smoothie": {
         "ingredients": [
@@ -914,7 +962,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Octo-Wine": {
         "ingredients": [
@@ -959,7 +1008,8 @@
         "distill_runs": 0,
         "aging_time": 22,
         "barrel_type": "Any",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Wind Elixir": {
         "ingredients": [
@@ -980,7 +1030,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Sparklestride Potion": {
         "ingredients": [
@@ -1001,7 +1052,8 @@
         "distill_runs": 4,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Squid Vodka": {
         "ingredients": [
@@ -1018,7 +1070,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Glow Squid Vodka": {
         "ingredients": [
@@ -1035,7 +1088,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Sparkling Water": {
         "ingredients": [
@@ -1052,7 +1106,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Spectral Ale": {
         "ingredients": [
@@ -1073,7 +1128,8 @@
         "distill_runs": 0,
         "aging_time": 8,
         "barrel_type": "Birch",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Plum Whiskey": {
         "ingredients": [
@@ -1090,7 +1146,8 @@
         "distill_runs": 2,
         "aging_time": 16,
         "barrel_type": "Spruce",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Warped Wine": {
         "ingredients": [
@@ -1111,7 +1168,8 @@
         "distill_runs": 0,
         "aging_time": 22,
         "barrel_type": "Warped",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Crimson Wine": {
         "ingredients": [
@@ -1132,7 +1190,8 @@
         "distill_runs": 0,
         "aging_time": 22,
         "barrel_type": "Crimson",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Cryogenic Elixir": {
         "ingredients": [
@@ -1149,7 +1208,8 @@
         "distill_runs": 3,
         "aging_time": 3,
         "barrel_type": "Birch",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Scorched Ether": {
         "ingredients": [
@@ -1166,7 +1226,8 @@
         "distill_runs": 4,
         "aging_time": 6,
         "barrel_type": "Birch",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Lifeforce Potion": {
         "ingredients": [
@@ -1187,7 +1248,8 @@
         "distill_runs": 5,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Thorns Potion": {
         "ingredients": [
@@ -1204,7 +1266,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Leadership Brew": {
         "ingredients": [
@@ -1221,7 +1284,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Emerald Rum": {
         "ingredients": [
@@ -1238,7 +1302,8 @@
         "distill_runs": 0,
         "aging_time": 17,
         "barrel_type": "Oak",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Tomato Soup": {
         "ingredients": [
@@ -1251,7 +1316,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Glowberry Juice": {
         "ingredients": [
@@ -1264,7 +1330,8 @@
         "distill_runs": 2,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Twisted Vodka": {
         "ingredients": [
@@ -1281,7 +1348,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Ghostly Liquor": {
         "ingredients": [
@@ -1302,7 +1370,8 @@
         "distill_runs": 2,
         "aging_time": 5,
         "barrel_type": "Birch",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Meaty Gin": {
         "ingredients": [
@@ -1327,7 +1396,8 @@
         "distill_runs": 3,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Witch Brew": {
         "ingredients": [
@@ -1348,7 +1418,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "uncommon"
+        "rarity": "uncommon",
+        "credits": "ooah"
     },
     "Spiced Pink Lemonade": {
         "ingredients": [
@@ -1369,7 +1440,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Sour Plum Lemonade": {
         "ingredients": [
@@ -1390,7 +1462,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Salty Blue Lemonade": {
         "ingredients": [
@@ -1411,7 +1484,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Bitter Lime Lemonade": {
         "ingredients": [
@@ -1432,7 +1506,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Sweet Red Lemonade": {
         "ingredients": [
@@ -1453,7 +1528,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Dunesplicer Brew": {
         "ingredients": [
@@ -1470,7 +1546,8 @@
         "distill_runs": 4,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Guardians Blessing": {
         "ingredients": [
@@ -1487,7 +1564,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Dolphin Essence": {
         "ingredients": [
@@ -1508,7 +1586,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Valkyrie Potion": {
         "ingredients": [
@@ -1525,7 +1604,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Charm Potion": {
         "ingredients": [
@@ -1546,7 +1626,8 @@
         "distill_runs": 2,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Defender Potion": {
         "ingredients": [
@@ -1567,7 +1648,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Rage Potion": {
         "ingredients": [
@@ -1588,7 +1670,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Wrath Potion": {
         "ingredients": [
@@ -1609,7 +1692,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Vegetable Beef Soup": {
         "ingredients": [
@@ -1634,7 +1718,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Frostbitten Whiskey": {
         "ingredients": [
@@ -1651,7 +1736,8 @@
         "distill_runs": 2,
         "aging_time": 14,
         "barrel_type": "Spruce",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Hellfire Brandy": {
         "ingredients": [
@@ -1672,7 +1758,8 @@
         "distill_runs": 4,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Ender Mead": {
         "ingredients": [
@@ -1689,7 +1776,8 @@
         "distill_runs": 0,
         "aging_time": 6,
         "barrel_type": "Spruce",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Prespective Potion": {
         "ingredients": [
@@ -1710,7 +1798,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Troll Potion": {
         "ingredients": [
@@ -1731,7 +1820,8 @@
         "distill_runs": 3,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Black Wine": {
         "ingredients": [
@@ -1748,7 +1838,8 @@
         "distill_runs": 0,
         "aging_time": 27,
         "barrel_type": "Dark Oak",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Bulwark Potion": {
         "ingredients": [
@@ -1769,7 +1860,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "Lucifine"
     },
     "Skyline Potion": {
         "ingredients": [
@@ -1786,7 +1878,8 @@
         "distill_runs": 2,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "Korky"
     },
     "Stone Eater Potion": {
         "ingredients": [
@@ -1807,7 +1900,8 @@
         "distill_runs": 4,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Lifeline Potion": {
         "ingredients": [
@@ -1828,7 +1922,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Flask of Fireworks": {
         "ingredients": [
@@ -1853,7 +1948,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Potion of Soberness": {
         "ingredients": [
@@ -1874,7 +1970,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Cloudwalker Ether": {
         "ingredients": [
@@ -1895,7 +1992,8 @@
         "distill_runs": 0,
         "aging_time": 2,
         "barrel_type": "Any",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Viel of Good Fortune": {
         "ingredients": [
@@ -1920,7 +2018,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Golem Draught": {
         "ingredients": [
@@ -1945,7 +2044,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Calcium Potion": {
         "ingredients": [
@@ -1962,7 +2062,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "128 Rotten_Flesh": {
         "ingredients": [],
@@ -1970,7 +2071,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Dragon Ether": {
         "ingredients": [
@@ -1991,7 +2093,8 @@
         "distill_runs": 0,
         "aging_time": 18,
         "barrel_type": "Warped",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Demonic Rage Potion": {
         "ingredients": [
@@ -2008,7 +2111,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Holy Wrath Potion": {
         "ingredients": [
@@ -2025,7 +2129,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Potion of Sol": {
         "ingredients": [
@@ -2046,7 +2151,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Potion of Luna": {
         "ingredients": [
@@ -2067,7 +2173,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Hunter Potion": {
         "ingredients": [
@@ -2088,7 +2195,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Potion of Glowing": {
         "ingredients": [
@@ -2109,7 +2217,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Ninja Potion": {
         "ingredients": [
@@ -2126,7 +2235,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Wisdom Potion": {
         "ingredients": [
@@ -2143,7 +2253,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Distilled Chaos": {
         "ingredients": [
@@ -2164,7 +2275,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Astral Elixir": {
         "ingredients": [
@@ -2181,7 +2293,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Cat Essence": {
         "ingredients": [
@@ -2202,7 +2315,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "rare"
+        "rarity": "rare",
+        "credits": "ooah"
     },
     "Post-Mortal Spirits": {
         "ingredients": [
@@ -2219,7 +2333,8 @@
         "distill_runs": 9,
         "aging_time": 72,
         "barrel_type": "Any",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Countdown Omen": {
         "ingredients": [
@@ -2240,7 +2355,8 @@
         "distill_runs": 6,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Honey-Azalea Extract": {
         "ingredients": [
@@ -2257,7 +2373,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Scary"
     },
     "Ghastly Tonic": {
         "ingredients": [
@@ -2274,7 +2391,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Weakq"
     },
     "Ascendant Root Beer": {
         "ingredients": [
@@ -2291,7 +2409,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Floral Concotion": {
         "ingredients": [
@@ -2320,7 +2439,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Mana Stabilizer": {
         "ingredients": [
@@ -2341,7 +2461,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Venus Nectar": {
         "ingredients": [
@@ -2362,7 +2483,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Lucifine"
     },
     "Quint-Shot Espresso": {
         "ingredients": [
@@ -2387,7 +2509,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Lucifine"
     },
     "Liquid Diamond": {
         "ingredients": [
@@ -2408,7 +2531,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Lucifine"
     },
     "Prismatic Lemonade": {
         "ingredients": [
@@ -2481,7 +2605,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Divine Whiskey": {
         "ingredients": [
@@ -2498,7 +2623,8 @@
         "distill_runs": 4,
         "aging_time": 23,
         "barrel_type": "Spruce",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Tonic of Precision": {
         "ingredients": [
@@ -2519,7 +2645,8 @@
         "distill_runs": 0,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Fireball Cocktail": {
         "ingredients": [
@@ -2540,7 +2667,8 @@
         "distill_runs": 2,
         "aging_time": 15,
         "barrel_type": "Spruce",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "ooah"
     },
     "Spacefaring Potion": {
         "ingredients": [
@@ -2561,7 +2689,8 @@
         "distill_runs": 12,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Lucifine"
     },
     "Super-Distilled Chaos": {
         "ingredients": [
@@ -2586,6 +2715,7 @@
         "distill_runs": 26,
         "aging_time": 0,
         "barrel_type": "None",
-        "rarity": "legendary"
+        "rarity": "legendary",
+        "credits": "Tessa"
     }
 }
