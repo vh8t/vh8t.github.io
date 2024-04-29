@@ -108,3 +108,16 @@ section {
   margin-inline: 20px;
   margin-top: 10px;
 }
+
+@media (max-width: 732px) {
+  section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+}
