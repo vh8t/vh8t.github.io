@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../prism.css">
+
+    <link href="./code.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <title>vh8t - asm</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="../"><p class="brand">Samuel Golis</p></a>
+      </div>
+      <div class="navbar">
+        <a href="../p/"><p>Projects</p></a>
+        <p>&vert;</p>
+        <a href="./"><p style="margin-right: 30px">Code</p></a>
+      </div>
+    </header>
+
+    <section>
+      <h1>Writing "Hello, World!" in Assembly</h1>
+
+      <h2>Prerequisites</h2>
+      <p>Before getting started, ensure you have the following:</p>
+      <ul>
+        <li>A NASM compiler</li>
+        <li>An x86_64 CPU</li>
+        <li>Syscall cheatsheet (I use <a href="https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/" target="_blank">this one</a>)</li>
+      </ul>
+      <p>If you're using Linux Arch, you can install NASM by running <code>sudo pacman -S nasm</code>. Alternatively, download it from the official <a href="https://nasm.us/" target="_blank">nasm.us</a> website.</p>
+
+      <h2>Step 1: Setting Up the Main Entry Point</h2>
+      <p>In assembly language, we need to define a main entry point for our program. This is typically done using the <code>_start</code> label.</p>
+      <pre><code class="language-nasm">section .text
+    global _start
+
+_start:</code></pre>
+
+      <h2>Step 2: Printing "Hello, World!"</h2>
+      <p>Assembly programs typically exit manually, so after printing "Hello, World!", we exit the program using the <code>exit</code> system call.</p>
+      <pre><code class="language-nasm">section .text
+    global _start
+
+_start:
+    mov rax, 1        ; System call number for sys_write
+    mov rdi, 1        ; File descriptor 1: stdout
+    mov rsi, msg      ; Pointer to the message to be printed
+    mov rdx, len      ; Length of the message
+    syscall
+
+    mov rax, 60       ; System call number for sys_exit
+    xor rdi, rdi      ; Exit status: 0
+    syscall</code></pre>
+
+      <h2>Step 3: Understanding System Calls</h2>
+      <p>In assembly, system calls are used to interact with the operating system. Here, we use <code>syscall</code> to print the message to standard output and exit the program.</p>
+
+      <h2>Step 4: Defining Data</h2>
+      <p>We define the message to be printed in the <code>.data</code> section. Here, <code>msg</code> is the message buffer, and <code>len</code> is the length of the message.</p>
+      <pre><code class="language-nasm">section .data
+    msg db 'Hello, World!', 10
+    len equ $ - msg
+
+section .text
+    global _start
+
+_start:
+    mov rax, 1        ; System call number for sys_write
+    mov rdi, 1        ; File descriptor 1: stdout
+    mov rsi, msg      ; Pointer to the message to be printed
+    mov rdx, len      ; Length of the message
+    syscall
+
+    mov rax, 60       ; System call number for sys_exit
+    xor rdi, rdi      ; Exit status: 0
+    syscall</code></pre>
+      <p>The <code>10</code> at the end represents the newline character (<code>\n</code>), indicating the end of the line.</p>
+      <p>The calculation of <code>len</code> is done using the <code>equ</code> directive, which calculates the length of the message by subtracting the address of <code>msg</code> from the current location (<code>$</code>).</p>
+
+      <h2>Step 5: Registers Used in the Code</h2>
+      <p>The code uses several registers:</p>
+      <ul>
+        <li><code>rax</code>: System call number. It specifies which system call to invoke.</li>
+        <li><code>rdi</code>: Argument 1 for the system call. In this case, it represents the file descriptor (1 for standard output).</li>
+        <li><code>rsi</code>: Argument 2 for the system call. It points to the message to be printed.</li>
+        <li><code>rdx</code>: Argument 3 for the system call. It specifies the length of the message.</li>
+      </ul>
+
+      <h2>Step 6: Compiling and Running</h2>
+      <p>Save the code in a file named <code>hello.asm</code>. To assemble and link it, run the following commands:</p>
+      <pre><code class="language-shell">nasm -f elf64 hello.asm
+ld -o hello hello.o</code></pre>
+      <p>Now, you can run the program by executing <code>./hello</code>.</p>
+    </section>
+
+    <footer>
+      <p>Copyright (c) 2024 Samuel Golis. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../prism.js"></script>
+  </body>
+</html>

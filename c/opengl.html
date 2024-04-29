@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../prism.css">
+
+    <link href="./code.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <title>vh8t - OpenGL</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="../"><p class="brand">Samuel Golis</p></a>
+      </div>
+      <div class="navbar">
+        <a href="../p/"><p>Projects</p></a>
+        <p>&vert;</p>
+        <a href="./"><p style="margin-right: 30px">Code</p></a>
+      </div>
+    </header>
+
+    <section>
+      <h1>OpenGL in C</h1>
+
+      <h2>Prerequisites</h2>
+      <p>Before getting started, ensure you have the following:</p>
+      <ul>
+        <li><a href="https://www.libsdl.org/" target="_blank">SDL2</a> (Simple DirectMedia Layer)</li>
+        <li><a href="https://github.com/burtonageo/SOIL" target="_blank">SOIL</a> (Simple OpenGL Image Loader)</li>
+        <li><a href="https://www.opengl.org/" target="_blank">OpenGL</a> (On most Linux distros already installed)</li>
+        <li>GCC (the GNU Compiler Collection)</li>
+      </ul>
+      <p>I already assume you have at least basic understanding of C.</p>
+
+      <h2>Step 1: Setting Up the Main Entry Point and Imports</h2>
+      <p>We will start by setting up the main function as well as all the imports we will be using in the future.</p>
+
+      <pre><code class="language-c">/*** imports ***/
+#include &lt;stdbool.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+
+#include &lt;SDL2/SDL.h&gt;
+#include &lt;SDL2/SDL_opengl.h&gt;
+#include &lt;SOIL/SOIL.h&gt;
+#include &lt;GL/glu.h&gt;
+
+/*** main ***/
+int main() {
+    return 0;
+}</code></pre>
+
+      <h2>Step 2: Defining all globals</h2>
+      <p>We will define some global values we will be using through out the tutorial.</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+#define MAX_LINE_LENGTH 256
+#define M_PI 3.14159265358979323846
+
+typedef struct {
+    GLfloat x, y, z;
+} Vertex;
+
+typedef struct {
+    Vertex vertices[4];
+    GLfloat texCoords[8];
+    GLuint indices[6];
+    char texturePath[MAX_LINE_LENGTH];
+} QuadData;
+
+GLfloat cameraPos[3] = {0.0f, 0.0f, 3.0f};
+GLfloat cameraFront[3] = {0.0f, 0.0f, -1.0f};
+GLfloat cameraUp[3] = {0.0f, 1.0f, 0.0f};
+GLfloat cameraRight[3];
+
+GLfloat lastX = 600, lastY = 400;
+bool firstMouse = true;
+GLfloat yaw = -90.0f;
+GLfloat pitch = 0.0f;
+
+const GLfloat cameraSpeed = 0.05f;
+const GLfloat mouseSensitivity = 0.05f;
+
+const int WINDOW_WIDTH = 1200;
+const int WINDOW_HEIGHT = 800;
+
+/*** main ***/
+</code></pre>
+
+      <h2>Step 3: Creating a window</h2>
+      <p>Now we will make a OpenGL window, initialize OpenGL and create main loop with 3D rendering.</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** main ***/
+int main () {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+        return -1;
+    }
+
+    SDL_Window* window = SDL_CreateWindow("SDL Game (OpenGL)", 100, 100, 1200, 800, SDL_WINDOW_OPENGL);
+    if (!window) {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Window could not be created! SDL_Error: %s\n", SDL_GetError());
+        SDL_Quit();
+        return -1;
+    }
+
+    SDL_GLContext glContext = SDL_GL_CreateContext(window);
+    if (!glContext) {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "OpenGL context could not be created! SDL_Error: %s\n", SDL_GetError());
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return -1;
+    }
+
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glEnable(GL_TEXTURE_2D);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(45.0f, (GLfloat)WINDOW_WIDTH / (GLfloat)WINDOW_HEIGHT, 0.1f, 100.0f);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+    glEnable(GL_DEPTH_TEST);
+    SDL_SetRelativeMouseMode(SDL_TRUE);
+
+    QuadData quads[100];
+    int numQuads;
+    parseWorldFile("./assets/maps/map1.world", quads, &amp;numQuads);     // We will make special file to hold our world data
+
+    GLuint textureIDs[numQuads];
+    for (int i = 0; i &lt; numQuads; i++) {
+        loadTexture(quads[i].texturePath, &amp;textureIDs[i]);    // We will later implement texture loading system
+    }
+
+    bool quit = false;
+    while (!quit) {
+        processInput(window);     // We will later implement Input handler
+        updateViewMatrix();       // We will later implement camera system
+
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        for (int i = 0; i &lt; numQuads; i++) {
+            glBindTexture(GL_TEXTURE_2D, textureIDs[i]);
+            glEnableClientState(GL_VERTEX_ARRAY);
+            glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+            glVertexPointer(3, GL_FLOAT, 0, quads[i].vertices);
+            glTexCoordPointer(2, GL_FLOAT, 0, quads[i].texCoords);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, quads[i].indices);
+
+            glDisableClientState(GL_VERTEX_ARRAY);
+            glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+        }
+
+        SDL_GL_SwapWindow(window);
+    }
+
+    SDL_GL_DeleteContext(glContext);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+
+    return 0;
+}</code></pre>
+
+      <h2>Step 4: Mathematical functions</h2>
+      <p>For moving the camera and calculating vertices we will need 3 custom function, I am sure some C libraries will have them somewhere but I'll just do it this way.</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** math ***/
+float glm_rad(float degrees) {
+    return degrees * (M_PI / 180.0f);
+}
+
+void vec3_norm(GLfloat *vec) {
+    GLfloat length = sqrt(vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2]);
+    vec[0] /= length;
+    vec[1] /= length;
+    vec[2] /= length;
+}
+
+void vec3_cross(GLfloat *result, const GLfloat *a, const GLfloat *b) {
+    result[0] = a[1] * b[2] - a[2] * b[1];
+    result[1] = a[2] * b[0] - a[0] * b[2];
+    result[2] = a[0] * b[1] - a[1] * b[0];
+}
+
+/*** main ***/</code></pre>
+
+      <h2>Step 5: Custom world file</h2>
+      <p>We will now implement custom world files, make sure to same them in <code>./assets/maps/</code> as <code>.world</code> files, i will be using <code>world1.world</code></p>
+      <p>The file syntax will be as follows</p>
+      <pre><code class="language-world">vert  (top left xyz)  (bottom left xyz) (bottom right xyz)  (top right xyz)                                   (vert = vertices)
+text  (bottom left)   (top left)        (top right)         (bottom right)  (texture path)                    (text = texture)
+indi  (triangle 1)    (triangle 2)                                                                            (indi = indices)</code></pre>
+
+      <p>You can use this as a test file, make sure to have textures in <code>./assets/textures/</code></p>
+      <pre><code class="language-world">vert  -0.5 0.5 0.0    -0.5 -0.5 0.0     0.5 -0.5 0.0        0.5 0.5 0.0
+text  0.0 1.0         0.0 0.0           1.0 0.0             1.0 1.0         ./assets/textures/default.png
+indi  0 1 2           0 2 3
+
+vert  -1.0 0.5 1.0    -1.0 -0.5 1.0     -0.5 -0.5 0.0       -0.5 0.5 0.0
+text  0.0 1.0         0.0 0.0           1.0 0.0             1.0 1.0         ./assets/textures/pink.png
+indi  0 1 2           0 2 3
+
+vert  -1.0 -0.5 1.0   0.5 -0.5 1.0      0.5 -0.5 0.0        -0.5 -0.5 0.0
+text  0.0 1.0         0.0 0.0           1.0 0.0             1.0 1.0         ./assets/textures/red.png
+indi  0 1 2           0 2 3</code></pre>
+
+      <h2>Step 6: Parsing the world file</h2>
+      <p>We will now make a function that will parse the world file for us and pass it to the renderer.</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** math ***/
+/*** world ***/
+void parseWorldFile(const char* filename, QuadData* quads, int* numQuads) {
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        fprintf(stderr, "Error: Failed to open world file %s\n", filename);
+        exit(1);
+    }
+
+    *numQuads = 0;
+    char line[MAX_LINE_LENGTH];
+
+    while (fgets(line, MAX_LINE_LENGTH, file)) {
+        if (strstr(line, "vert")) {
+            sscanf(line, "vert %f %f %f %f %f %f %f %f %f %f %f %f",
+                   &amp;quads[*numQuads].vertices[0].x, &apm;quads[*numQuads].vertices[0].y, &apm;quads[*numQuads].vertices[0].z,
+                   &amp;quads[*numQuads].vertices[1].x, &amp;quads[*numQuads].vertices[1].y, &amp;quads[*numQuads].vertices[1].z,
+                   &amp;quads[*numQuads].vertices[2].x, &amp;quads[*numQuads].vertices[2].y, &amp;quads[*numQuads].vertices[2].z,
+                   &amp;quads[*numQuads].vertices[3].x, &amp;quads[*numQuads].vertices[3].y, &amp;quads[*numQuads].vertices[3].z);
+        } else if (strstr(line, "text")) {
+            sscanf(line, "text %f %f %f %f %f %f %f %f %s",
+                   &amp;quads[*numQuads].texCoords[0], &amp;quads[*numQuads].texCoords[1],
+                   &amp;quads[*numQuads].texCoords[2], &amp;quads[*numQuads].texCoords[3],
+                   &amp;quads[*numQuads].texCoords[4], &amp;quads[*numQuads].texCoords[5],
+                   &amp;quads[*numQuads].texCoords[6], &amp;quads[*numQuads].texCoords[7],
+                   quads[*numQuads].texturePath);
+        } else if (strstr(line, "indi")) {
+            sscanf(line, "indi %u %u %u %u %u %u",
+                   &amp;quads[*numQuads].indices[0], &amp;quads[*numQuads].indices[1],
+                   &amp;quads[*numQuads].indices[2], &amp;quads[*numQuads].indices[3],
+                   &amp;quads[*numQuads].indices[4], &amp;quads[*numQuads].indices[5]);
+            (*numQuads)++;
+        }
+    }
+
+    fclose(file);
+}
+
+/*** main ***/</code></pre>
+
+      <h2>Step 7: Loading textures</h2>
+      <p>We will add <code>loadTexture</code> funtion to the world section which will load all textures and assign them a ID</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** math ***/
+/*** world ***/
+void parseWorldFile(const char* filename, QuadData* quads, int* numQuads) {
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        fprintf(stderr, "Error: Failed to open world file %s\n", filename);
+        exit(1);
+    }
+
+    *numQuads = 0;
+    char line[MAX_LINE_LENGTH];
+
+    while (fgets(line, MAX_LINE_LENGTH, file)) {
+        if (strstr(line, "vert")) {
+            sscanf(line, "vert %f %f %f %f %f %f %f %f %f %f %f %f",
+                   &amp;quads[*numQuads].vertices[0].x, &apm;quads[*numQuads].vertices[0].y, &apm;quads[*numQuads].vertices[0].z,
+                   &amp;quads[*numQuads].vertices[1].x, &amp;quads[*numQuads].vertices[1].y, &amp;quads[*numQuads].vertices[1].z,
+                   &amp;quads[*numQuads].vertices[2].x, &amp;quads[*numQuads].vertices[2].y, &amp;quads[*numQuads].vertices[2].z,
+                   &amp;quads[*numQuads].vertices[3].x, &amp;quads[*numQuads].vertices[3].y, &amp;quads[*numQuads].vertices[3].z);
+        } else if (strstr(line, "text")) {
+            sscanf(line, "text %f %f %f %f %f %f %f %f %s",
+                   &amp;quads[*numQuads].texCoords[0], &amp;quads[*numQuads].texCoords[1],
+                   &amp;quads[*numQuads].texCoords[2], &amp;quads[*numQuads].texCoords[3],
+                   &amp;quads[*numQuads].texCoords[4], &amp;quads[*numQuads].texCoords[5],
+                   &amp;quads[*numQuads].texCoords[6], &amp;quads[*numQuads].texCoords[7],
+                   quads[*numQuads].texturePath);
+        } else if (strstr(line, "indi")) {
+            sscanf(line, "indi %u %u %u %u %u %u",
+                   &amp;quads[*numQuads].indices[0], &amp;quads[*numQuads].indices[1],
+                   &amp;quads[*numQuads].indices[2], &amp;quads[*numQuads].indices[3],
+                   &amp;quads[*numQuads].indices[4], &amp;quads[*numQuads].indices[5]);
+            (*numQuads)++;
+        }
+    }
+
+    fclose(file);
+}
+
+void loadTexture(const char* texturePath, GLuint* textureID) {
+    int width, height;
+    unsigned char* image = SOIL_load_image(texturePath, &amp;width, &amp;height, 0, SOIL_LOAD_RGB);
+    if (!image) {
+        fprintf(stderr, "Error: Failed to load texture image %s\n", texturePath);
+        exit(1);
+    }
+
+    glGenTextures(1, textureID);
+    glBindTexture(GL_TEXTURE_2D, *textureID);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+    SOIL_free_image_data(image);
+    glGenerateMipmap(GL_TEXTURE_2D);
+}
+
+/*** main ***/</code></pre>
+
+      <h2>Step 8: Input handling</h2>
+      <p>Probably the longest past is to handle all inputs, we will allow the user to move using <code>w s a d</code> and mouse to rotate</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** math ***/
+/*** world ***/
+/*** input ***/
+void processInput(SDL_Window* window) {
+    SDL_Event event;
+    while (SDL_PollEvent(&amp;event)) {
+        switch (event.type) {
+            case SDL_QUIT:
+                exit(EXIT_SUCCESS);
+                break;
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym) {
+                    case SDLK_ESCAPE:
+                        exit(EXIT_SUCCESS);
+                        break;
+                    case SDLK_w:
+                        cameraPos[0] += cameraSpeed * cameraFront[0];
+                        cameraPos[1] += cameraSpeed * cameraFront[1];
+                        cameraPos[2] += cameraSpeed * cameraFront[2];
+                        break;
+                    case SDLK_s:
+                        cameraPos[0] -= cameraSpeed * cameraFront[0];
+                        cameraPos[1] -= cameraSpeed * cameraFront[1];
+                        cameraPos[2] -= cameraSpeed * cameraFront[2];
+                        break;
+                    case SDLK_a:
+                        cameraPos[0] -= cameraSpeed * cameraRight[0];
+                        cameraPos[1] -= cameraSpeed * cameraRight[1];
+                        cameraPos[2] -= cameraSpeed * cameraRight[2];
+                        break;
+                    case SDLK_d:
+                        cameraPos[0] += cameraSpeed * cameraRight[0];
+                        cameraPos[1] += cameraSpeed * cameraRight[1];
+                        cameraPos[2] += cameraSpeed * cameraRight[2];
+                        break;
+                }
+                break;
+            case SDL_MOUSEMOTION:
+                if (event.motion.xrel != 0 || event.motion.yrel != 0) {
+                    GLfloat xOffset = event.motion.xrel * mouseSensitivity;
+                    GLfloat yOffset = -event.motion.yrel * mouseSensitivity;
+
+                    yaw += xOffset;
+                    pitch += yOffset;
+
+                    yaw = fmod(yaw, 360.0f);
+
+                    if (pitch &gt; 89.0f) pitch = 89.0f;
+                    if (pitch &lt; -89.0f) pitch = -89.0f;
+
+                    GLfloat frontX = cos(glm_rad(yaw)) * cos(glm_rad(pitch));
+                    GLfloat frontY = sin(glm_rad(pitch));
+                    GLfloat frontZ = sin(glm_rad(yaw)) * cos(glm_rad(pitch));
+                    cameraFront[0] = frontX;
+                    cameraFront[1] = frontY;
+                    cameraFront[2] = frontZ;
+                    vec3_norm(cameraFront);
+
+                    vec3_cross(cameraRight, cameraFront, cameraUp);
+                    vec3_norm(cameraRight);
+                }
+        }
+    }
+}
+
+/*** main ***/</code></pre>
+
+      <h2>Step 9: Update camera</h2>
+      <p>Last part of the code that is missing is to update the camera view matrix</p>
+      <pre><code class="language-c">/*** imports ***/
+/*** defines ***/
+/*** math ***/
+/*** world ***/
+/*** input ***/
+/*** camera ***/
+void updateViewMatrix() {
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(cameraPos[0], cameraPos[1], cameraPos[2],
+              cameraPos[0] + cameraFront[0], cameraPos[1] + cameraFront[1], cameraPos[2] + cameraFront[2],
+              cameraUp[0], cameraUp[1], cameraUp[2]);
+}
+
+/*** main ***/</code></pre>
+      
+      <h2>Step 10: Compiling and Running</h2>
+      <p>Save the code in a file named <code>main.c</code>. To compile it, run the following commands:</p>
+      <pre><code class="language-shell">gcc main.c -o main -lSDL2 -lGL -lGLU -lSOIL -lm</code></pre>
+      <p>Now, you can run the program by executing <code>./main</code>.</p>
+    </section>
+
+    <footer>
+      <p>Copyright (c) 2024 Samuel Golis. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../prism.js"></script>
+  </body>
+</html>
