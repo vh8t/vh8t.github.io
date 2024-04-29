@@ -117,6 +117,7 @@ section {
   }
 
   footer {
+    position: static;
     display: flex;
     width: 100%;
     text-align: center;
