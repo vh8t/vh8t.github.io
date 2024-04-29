@@ -111,7 +111,9 @@ section {
 
 @media (max-width: 732px) {
   section {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
+    padding: 30px;
   }
 
   footer {
