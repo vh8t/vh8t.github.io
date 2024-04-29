@@ -120,11 +120,15 @@ footer {
 
 @media (max-width: 732px) {
   section {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
   }
 
   img {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-right: 0;
     margin-bottom: 25px;
