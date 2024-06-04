@@ -67,6 +67,10 @@ footer {
   font-size: 12px;
 }
 
+footer p {
+  width: 100%;
+}
+
 section {
   padding: 20px;
   margin: 20px;

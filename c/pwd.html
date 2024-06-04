@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="Hey there! I'm Samuel Golis, aka vh8t. As a software engineering student, I'm all about coding. I enjoy working with Go, Python, and C.">
+    <meta name="author" content="Samuel Golis">
+
+    <meta property="og:title" content="PWD in assembly">
+    <meta property="og:description" content="Recreating 'pwd' command in assembly x86_64 for Linux">
+    <meta property="og:image" content="../assets/banner.jpg">
+    <meta property="og:url" content="https://vh8t.xyz/c/pwd.html">
+
     <link rel="stylesheet" href="../prism.css">
 
     <link href="./code.css" rel="stylesheet">
@@ -27,24 +35,28 @@
       <h1>PWD in Assembly</h1>
 
       <h2>Prerequisites</h2>
+      <p>For the rest of the blog I will refer to x86_64 assembly for Linux as just assembly</p>
       <p>Before getting started, ensure you have the following:</p>
       <ul>
         <li>A NASM compiler</li>
-        <li>An x86_64 CPU</li>
+        <li>An x86_64 CPU and Linux based OS</li>
         <li>Syscall cheatsheet (I use <a href="https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/" target="_blank">this one</a>)</li>
       </ul>
       <p>If you're using Linux Arch, you can install NASM by running <code>sudo pacman -S nasm</code>. Alternatively, download it from the official <a href="https://nasm.us/" target="_blank">nasm.us</a> website.</p>
 
+      <h2>Before we start</h2>
+      <p>Please read <a href="./asm.html">Hello, World! in assembly</a> before we start as I explain how assembly works more in detail.</p>
+
       <h2>Step 1: Setting Up the Main Entry Point</h2>
       <p>In assembly language, we need to define a main entry point for our program. This is typically done using the <code>_start</code> label.</p>
-      <pre><code class="language-nasm">section .text
+      <pre><code class="line-numbers language-nasm">section .text
     global _start
 
 _start:</code></pre>
 
       <h2>Step 2: Reserving buffer</h2>
       <p>We define the buffer where we will store the path in the <code>.data</code> section.</p>
-      <pre><code class="language-nasm">section .data
+      <pre><code class="line-numbers language-nasm">section .data
     buffer:
         times 256 db 0      ; 256 bytes filled with 0
 
@@ -54,8 +66,8 @@ section .text
 _start:</code></pre>
 
       <h2>Step 3: Getting the current directory</h2>
-      <p>We use the syscall <code>79</code> to get the current working directory and save it in the <code>buffer</code> we defined earlier.</p>
-      <pre><code class="language-nasm">section .data
+      <p>To get the cwd we can use the <code>sys_getcwd</code> syscall, it has 2 arguments, first one to specify where the path will be stored (as string) and second to specify the buffer size</p>
+      <pre><code class="line-numbers language-nasm">section .data
     buffer:
         times 256 db 0      ; 256 bytes filled with 0
 
@@ -70,7 +82,7 @@ _start:
 
       <h2>Step 4: Printing buffer to terminal</h2>
       <p>Lastly we will print the path stored in <code>buffer</code> and exit.</p>
-      <pre><code class="language-nasm">section .data
+      <pre><code class="line-numbers language-nasm">section .data
     buffer:
         times 256 db 0      ; 256 bytes filled with 0
 
@@ -95,9 +107,9 @@ _start:
 
       <h2>Step 5: Compiling and Running</h2>
       <p>Save the code in a file named <code>pwd.asm</code>. To assemble and link it, run the following commands:</p>
-      <pre><code class="language-shell">nasm -f elf64 pwd.asm
+      <pre><code class="line-numbers language-shell">nasm -f elf64 pwd.asm
 ld -o pwd pwd.o</code></pre>
-      <p>Now, you can run the program by executing <code>./pwd</code>.</p>
+      <p>Now, you can run the program by running <code>./pwd</code>.</p>
     </section>
 
     <footer>

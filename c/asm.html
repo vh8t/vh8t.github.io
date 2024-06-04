@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="Hey there! I'm Samuel Golis, aka vh8t. As a software engineering student, I'm all about coding. I enjoy working with Go, Python, and C.">
+    <meta name="author" content="Samuel Golis">
+
+    <meta property="og:title" content="Hello, World! in assembly">
+    <meta property="og:description" content="Simple introduction to x86_64 assembly for Linux">
+    <meta property="og:image" content="../assets/banner.jpg">
+    <meta property="og:url" content="https://vh8t.xyz/c/asm.html">
+
     <link rel="stylesheet" href="../prism.css">
 
     <link href="./code.css" rel="stylesheet">
@@ -27,76 +35,96 @@
       <h1>Writing "Hello, World!" in Assembly</h1>
 
       <h2>Prerequisites</h2>
+      <p>For the rest of the blog I will refer to x86_64 assembly for Linux as just assembly</p>
       <p>Before getting started, ensure you have the following:</p>
       <ul>
         <li>A NASM compiler</li>
-        <li>An x86_64 CPU</li>
+        <li>An x86_64 CPU and Linux based OS</li>
         <li>Syscall cheatsheet (I use <a href="https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/" target="_blank">this one</a>)</li>
       </ul>
       <p>If you're using Linux Arch, you can install NASM by running <code>sudo pacman -S nasm</code>. Alternatively, download it from the official <a href="https://nasm.us/" target="_blank">nasm.us</a> website.</p>
 
+      <h2>Before we start</h2>
+      <p>Assembly is all about moving bytes into the right registers, you can move values into registers and then call a syscall which then would read the values you passed in and based on that the pc will do something.</p>
+      
+      <h2>Registers</h2>
+      <h4>64-bit registers</h4>
+      <ul>
+        <li><code>RAX</code> - Accumulator register (used in arithmetic operations)</li>
+        <li><code>RBX</code> - Base register (used to point to data in the data segment)</li>
+        <li><code>RCX</code> - Counter register (used in loops and string operations)</li>
+        <li><code>RDX</code> - Data register (used in I/O operations)</li>
+        <li><code>RSI</code> - Source index (used in string operations)</li>
+        <li><code>RDI</code> - Destination index (used in string operations)</li>
+        <li><code>RBP</code> - Base pointer (used to point to the base of the stack frame)</li>
+        <li><code>RSP</code> - Stack pointer (points to the top of the stack)</li>
+        <li><code>R8-R15</code> - Additional general-purpose registers introduced in x86-64</li>
+      </ul>
+      <p>All of these registers can also have the <code>R</code> replaced by <code>E</code> to represent their lower <code>32-bit</code>s or removed to represent their lower <code>16-bit</code>s, only exception are the <code>R8-R15</code> registers where instead of replacing the <code>R</code> they are suffixed with (<code>D</code> = lower <code>32-bit</code>s) and (<code>W</code> = lower <code>16-bit</code>s). For example <code>32-bit RBP</code> register would be <code>EBP</code> and for <code>16-bit RCX</code> you would use just <code>CX</code>. As for the <code>R8-R15</code> you would use <code>R8D-R15D</code> for the <code>32-bit</code> representation and <code>R8W-R15W</code> for the <code>16-bit</code> representation. You also have representation for lower and higher <code>8-bit</code>s of the <code>16-bit</code> registers, for the registers <code>RAX-RDX</code> the <code>R</code> is removed and <code>X</code> is replaced either by <code>H</code> = higher <code>8-bit</code>s or <code>L</code> = lower <code>8-bit</code>s, for the <code>RSI-RSP</code> it is same as <code>16-bit</code> registers except suffixed with <code>L</code> or <code>H</code>. Lastly for the <code>R8-R15</code> registers you only have the lower <code>8-bit</code>s which is <code>R8B-R15B</code></p>
+
       <h2>Step 1: Setting Up the Main Entry Point</h2>
       <p>In assembly language, we need to define a main entry point for our program. This is typically done using the <code>_start</code> label.</p>
-      <pre><code class="language-nasm">section .text
+      <pre><code class="line-numbers language-nasm">section .text
     global _start
 
 _start:</code></pre>
 
-      <h2>Step 2: Printing "Hello, World!"</h2>
-      <p>Assembly programs typically exit manually, so after printing "Hello, World!", we exit the program using the <code>exit</code> system call.</p>
-      <pre><code class="language-nasm">section .text
+      <h2>Step 2: Exit the program</h2>
+      <p>In assembly you have the exit the program manually, it is the equivalent to <code>return 0;</code> at the end of main function in C.</p>
+      <pre><code class="line-numbers language-nasm">section .text
     global _start
 
 _start:
-    mov rax, 1        ; System call number for sys_write
-    mov rdi, 1        ; File descriptor 1: stdout
-    mov rsi, msg      ; Pointer to the message to be printed
-    mov rdx, len      ; Length of the message
-    syscall
-
-    mov rax, 60       ; System call number for sys_exit
-    xor rdi, rdi      ; Exit status: 0
+    mov rax, 60       ; Move 60 to rax register (60 = code for sys_exit)
+    xor rdi, rdi      ; Set rdi to 0 (rdi = exit code) | to use custom exit code you can use `mov rdi, &lt;exit code&gt;`
     syscall</code></pre>
 
-      <h2>Step 3: Understanding System Calls</h2>
-      <p>In assembly, system calls are used to interact with the operating system. Here, we use <code>syscall</code> to print the message to standard output and exit the program.</p>
-
-      <h2>Step 4: Defining Data</h2>
-      <p>We define the message to be printed in the <code>.data</code> section. Here, <code>msg</code> is the message buffer, and <code>len</code> is the length of the message.</p>
-      <pre><code class="language-nasm">section .data
+      <h2>Step 3: Defining constants</h2>
+      <p>To print a message we need to make a constant to hold out message, you can not just pass a string to a function, you have to pass a address of the text we want to print.</p>
+      <pre><code class="line-numbers language-nasm">section .data
+    ; db stands for define byte, when a string is passed in it treats it as list of bytes:
+    ; 'H', 'e', 'l', 'l', 'o', ' ', ... and the 10 at the end is a new line ascii value
     msg db 'Hello, World!', 10
+    ; `$` represents the current position (end of msg), and `msg` represents msg position (start of msg)
+    ; subtracting them will results in the length of message
     len equ $ - msg
 
 section .text
     global _start
 
 _start:
-    mov rax, 1        ; System call number for sys_write
-    mov rdi, 1        ; File descriptor 1: stdout
-    mov rsi, msg      ; Pointer to the message to be printed
-    mov rdx, len      ; Length of the message
-    syscall
-
-    mov rax, 60       ; System call number for sys_exit
-    xor rdi, rdi      ; Exit status: 0
+    mov rax, 60       ; Move 60 to rax register (60 = code for sys_exit)
+    xor rdi, rdi      ; Set rdi to 0 (rdi = exit code) | to use custom exit code you can use `mov rdi, &lt;exit code&gt;`
     syscall</code></pre>
-      <p>The <code>10</code> at the end represents the newline character (<code>\n</code>), indicating the end of the line.</p>
-      <p>The calculation of <code>len</code> is done using the <code>equ</code> directive, which calculates the length of the message by subtracting the address of <code>msg</code> from the current location (<code>$</code>).</p>
 
-      <h2>Step 5: Registers Used in the Code</h2>
-      <p>The code uses several registers:</p>
-      <ul>
-        <li><code>rax</code>: System call number. It specifies which system call to invoke.</li>
-        <li><code>rdi</code>: Argument 1 for the system call. In this case, it represents the file descriptor (1 for standard output).</li>
-        <li><code>rsi</code>: Argument 2 for the system call. It points to the message to be printed.</li>
-        <li><code>rdx</code>: Argument 3 for the system call. It specifies the length of the message.</li>
-      </ul>
+      <h2>Step 4: Print</h2>
+      <p>Now that we have the constants defined we can now print them, this is does using the <code>sys_write</code> syscall which has 3 argument. First one for fd (file descriptor: e.g. file or stdout), second one is for the buffer to write and last one for the length </p>
+      <pre><code class="line-numbers language-nasm">section .data
+    ; db stands for define byte, when a string is passed in it treats it as list of bytes:
+    ; 'H', 'e', 'l', 'l', 'o', ' ', ... and the 10 at the end is a new line ascii value
+    msg db 'Hello, World!', 10
+    ; `$` represents the current position (end of msg), and `msg` represents msg position (start of msg)
+    ; subtracting them will results in the length of message
+    len equ $ - msg
 
-      <h2>Step 6: Compiling and Running</h2>
+section .text
+    global _start
+
+_start:
+    mov rax, 1        ; Move 1 to rax register (1 = code for sys_write)
+    mov rdi, 1        ; Move 1 to rdi register (1 = stdout)
+    mov rsi, msg      ; Move the msg address to rsi
+    mov rdx, len      ; Move the message length to rdx
+
+    mov rax, 60       ; Move 60 to rax register (60 = code for sys_exit)
+    xor rdi, rdi      ; Set rdi to 0 (rdi = exit code) | to use custom exit code you can use `mov rdi, &lt;exit code&gt;`
+    syscall</code></pre>
+
+      <h2>Step 5: Compiling and Running</h2>
       <p>Save the code in a file named <code>hello.asm</code>. To assemble and link it, run the following commands:</p>
-      <pre><code class="language-shell">nasm -f elf64 hello.asm
+      <pre><code class="line-numbers language-shell">nasm -f elf64 hello.asm
 ld -o hello hello.o</code></pre>
-      <p>Now, you can run the program by executing <code>./hello</code>.</p>
+      <p>Now, you can run the program by running <code>./hello</code> in your terminal.</p>
     </section>
 
     <footer>
