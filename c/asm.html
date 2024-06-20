@@ -100,7 +100,7 @@ _start:
     syscall</code></pre>
 
       <h2>Step 4: Print</h2>
-      <p>Now that we have the constants defined we can now print them, this is does using the <code>sys_write</code> syscall which has 3 argument. First one for fd (file descriptor: e.g. file or stdout), second one is for the buffer to write and last one for the length </p>
+      <p>Now that we have the constants defined we can now print them, this is done using the <code>sys_write</code> syscall which has 3 argument. First one for fd (file descriptor: e.g. file or stdout), second one is for the buffer to write and last one for the length </p>
       <pre><code class="line-numbers language-nasm">section .data
     ; db stands for define byte, when a string is passed in it treats it as list of bytes:
     ; 'H', 'e', 'l', 'l', 'o', ' ', ... and the 10 at the end is a new line ascii value
@@ -117,6 +117,7 @@ _start:
     mov rdi, 1        ; Move 1 to rdi register (1 = stdout)
     mov rsi, msg      ; Move the msg address to rsi
     mov rdx, len      ; Move the message length to rdx
+    syscall
 
     mov rax, 60       ; Move 60 to rax register (60 = code for sys_exit)
     xor rdi, rdi      ; Set rdi to 0 (rdi = exit code) | to use custom exit code you can use `mov rdi, &lt;exit code&gt;`
