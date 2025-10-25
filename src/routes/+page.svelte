@@ -1,31 +1,62 @@
 <script lang="ts">
-	import Navbar from '../components/Navbar.svelte';
-	import Footer from '../components/Footer.svelte';
+	import SiteFooter from '$lib/components/site-footer.svelte';
+	import SiteHeader from '$lib/components/site-header.svelte';
+
+	import * as Card from '$lib/components/ui/card';
+
+	import { Separator } from '$lib/components/ui/separator';
+	import { Button } from '$lib/components/ui/button';
+	import { ArrowRight } from '@lucide/svelte';
+
+	const logoSrc = 'https://vh8t.xyz/favicon.jpg';
 </script>
 
-<div class="flex h-screen flex-col bg-surface-50">
-	<Navbar />
+<div class="flex min-h-screen flex-col">
+	<SiteHeader />
 
-	<main class="flex flex-1 items-center justify-center px-6">
-		<div class="max-w-2xl text-center">
-			<!-- Inline Avatar and Name -->
-			<div class="mb-8 flex items-center justify-center gap-4">
-				<div
-					class="flex h-16 w-16 items-center justify-center rounded-xl bg-primary-100 text-xl font-bold text-primary-600"
-				>
-					SG
+	<main class="flex flex-grow items-center justify-center p-4 sm:p-8">
+		<div class="w-full max-w-4xl">
+			<Card.Root class="p-6 shadow-lg md:p-10">
+				<div class="flex flex-col items-center gap-6 md:flex-row md:gap-10">
+					<div class="flex-shrink-0">
+						<img
+							src={logoSrc}
+							alt="Your Logo"
+							class="h-24 w-24 rounded-full object-cover sm:h-32 sm:w-32"
+						/>
+					</div>
+
+					<div class="text-center md:text-left">
+						<h1 class="text-4xl tracking-tight sm:text-5xl">Samuel Golis</h1>
+						<p class="mt-2 text-lg text-muted-foreground">
+							Focusing on <span class="font-semibold text-foreground">C and C++</span>, low-level
+							programming, and performance-oriented systems.
+						</p>
+
+						<Button href="/projects" class="mt-4" variant="default" size="lg">
+							View Projects
+							<ArrowRight class="ml-2 h-4 w-4" />
+						</Button>
+					</div>
 				</div>
-				<h1 class="text-text-primary text-3xl font-light md:text-4xl">Samuel Golis</h1>
-			</div>
 
-			<!-- Description -->
-			<p class="text-text-secondary mb-8 text-left text-lg leading-relaxed md:text-xl">
-				Focusing on C and C++,<br />
-				low-level programming, and<br />
-				performance-oriented systems.
-			</p>
+				<Separator class="my-8" />
+
+				<div class="space-y-4 text-center md:text-left">
+					<h2 class="text-2xl font-semibold tracking-tight">About</h2>
+					<p class="text-muted-foreground">
+						I am a <span class="font-semibold text-primary">student</span> specializing in
+						<span class="font-semibold text-primary">systems programming</span>. I enjoy writing
+						clean,
+						<span class="font-semibold text-primary">efficient code</span> primarily in
+						<span class="font-semibold text-primary">C/C++</span>, with a focus on low-level
+						architecture and performance. I also utilize
+						<span class="font-semibold text-primary">Go</span> for tooling.
+					</p>
+				</div>
+			</Card.Root>
 		</div>
 	</main>
 
-	<Footer />
+	<SiteFooter />
 </div>

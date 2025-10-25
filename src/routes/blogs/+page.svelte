@@ -1,93 +1,83 @@
 <script lang="ts">
+	import SiteFooter from '$lib/components/site-footer.svelte';
+	import SiteHeader from '$lib/components/site-header.svelte';
+
+	import * as Card from '$lib/components/ui/card';
+
+	import { Button } from '$lib/components/ui/button';
+	import { Separator } from '$lib/components/ui/separator';
+	import { ArrowRight } from '@lucide/svelte';
+
 	interface BlogPost {
-		id: number;
 		slug: string;
 		title: string;
 		date: string;
-		read_time: number;
-		excerpt: string;
-		tags: string[];
-		published: boolean;
+		summary: string;
 	}
 
-	interface BlogData {
-		posts: BlogPost[];
-	}
-
-	import Navbar from '../../components/Navbar.svelte';
-	import Footer from '../../components/Footer.svelte';
-	import blog_data from '../../lib/blog_data.json';
-
-	const format_date = (str_date: string): string => {
-		const date = new Date(str_date);
-		return date.toLocaleDateString('en-US', {
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric'
-		});
-	};
-
-	const published_posts: BlogPost[] = (blog_data as BlogData).posts.filter(
-		(post: BlogPost) => post.published
-	);
+	const posts: BlogPost[] = [];
 </script>
 
-<div class="flex h-screen flex-col bg-surface-50">
-	<Navbar />
+{#snippet BlogPost(post: BlogPost)}
+	<article>
+		<div class="flex flex-col">
+			<time class="mb-2 text-sm font-medium tracking-wider text-primary uppercase">
+				{post.date}
+			</time>
 
-	<main class="flex flex-1 flex-col items-center px-6 py-6">
-		<div class="w-full max-w-2xl">
-			<!-- Header -->
-			<div class="mb-8 text-center">
-				<h1 class="text-text-primary mb-2 text-2xl font-light md:text-3xl">Writings</h1>
-				<p class="text-text-secondary text-sm">
-					Thoughts on software, systems, and technical challenges
-				</p>
+			<h2 class="text-2xl leading-snug sm:text-3xl">
+				{post.title}
+			</h2>
+
+			<p class="mt-3 max-w-[70ch] text-base text-muted-foreground sm:text-lg">
+				{post.summary}
+			</p>
+
+			<div class="mt-4">
+				<Button
+					href={`/blogs/${post.slug}`}
+					variant="link"
+					class="h-auto p-0 text-base font-semibold"
+				>
+					Read Article <ArrowRight class="ml-2 h-4 w-4" />
+				</Button>
 			</div>
+		</div>
+	</article>
+{/snippet}
 
-			<!-- Blog Posts -->
-			{#if published_posts.length === 0}
-				<div class="py-12 text-center">
-					<div class="text-text-secondary mb-4 text-6xl">📝</div>
-					<h3 class="text-text-primary mb-2 text-xl font-medium">No posts yet</h3>
-					<p class="text-text-secondary text-sm">Blog posts are coming soon. Check back later!</p>
-				</div>
-			{:else}
-				<div class="space-y-4">
-					{#each published_posts as post: BlogPost}
-						<article class="rounded-xl bg-white p-5 shadow-sm transition-all hover:shadow-md">
-							<div class="text-text-secondary mb-2 flex items-center gap-2 text-xs">
-								<span>{format_date(post.date)}</span>
-								<span>•</span>
-								<span>{post.read_time} min read</span>
-							</div>
-							<h2 class="text-text-primary mb-2 text-lg font-medium">
-								{post.title}
-							</h2>
-							<p class="text-text-secondary mb-3 text-sm">
-								{post.excerpt}
-							</p>
-							<div class="flex items-center justify-between">
-								<div class="flex gap-2">
-									{#each post.tags as tag: string}
-										<span class="text-text-secondary rounded-full bg-surface-100 px-2 py-1 text-xs">
-											{tag}
-										</span>
-									{/each}
-								</div>
-								<a
-									href="/blog/{post.slug}"
-									class="rounded-lg bg-primary-500 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-primary-600"
-								>
-									Read Post
-								</a>
-							</div>
-						</article>
+<div class="flex min-h-screen flex-col">
+	<SiteHeader />
+
+	<main class="flex-grow p-4 sm:p-8">
+		<div class="container mx-auto max-w-4xl pt-8 pb-12">
+			<header class="mb-12 text-center">
+				<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Blog & Articles ✍️</h1>
+				<p class="mt-2 text-lg text-muted-foreground">
+					Thoughts and deep dives on low-level programming and systems architecture.
+				</p>
+			</header>
+
+			{#if posts.length > 0}
+				<div class="space-y-8">
+					{#each posts as post}
+						{@render BlogPost(post)}
+						{#if post !== posts[posts.length - 1]}
+							<Separator />
+						{/if}
 					{/each}
 				</div>
+			{:else}
+				<Card.Root class="border-2 border-dashed bg-muted/20 py-12 text-center">
+					<Card.Title class="text-2xl font-semibold">Nothing to read yet!</Card.Title>
+					<Card.Description class="mt-2 text-muted-foreground">
+						I'm currently working on some new articles. Check back soon for deep dives into systems
+						programming.
+					</Card.Description>
+				</Card.Root>
 			{/if}
 		</div>
 	</main>
 
-	<Footer />
+	<SiteFooter />
 </div>
