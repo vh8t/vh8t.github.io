@@ -1,14 +1,13 @@
 <script lang="ts">
 	import SiteFooter from '$lib/components/site-footer.svelte';
 	import SiteHeader from '$lib/components/site-header.svelte';
+	import logo from '$lib/assets/vh8t.jpg';
 
 	import * as Card from '$lib/components/ui/card';
 
 	import { Separator } from '$lib/components/ui/separator';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowRight } from '@lucide/svelte';
-
-	const logoSrc = 'https://vh8t.xyz/favicon.jpg';
 </script>
 
 <div class="flex min-h-screen flex-col">
@@ -20,8 +19,8 @@
 				<div class="flex flex-col items-center gap-6 md:flex-row md:gap-10">
 					<div class="flex-shrink-0">
 						<img
-							src={logoSrc}
-							alt="Your Logo"
+							src={logo}
+							alt="vh8t.jpg"
 							class="h-24 w-24 rounded-full object-cover sm:h-32 sm:w-32"
 						/>
 					</div>
