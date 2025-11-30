@@ -10,8 +10,12 @@
 	// std::vector<std::pair<std::string, std::optional<std::string>>>
 	let stuff: [string, string | undefined][] = [
 		[
-			'AJ Prezentace',
+			'AJ Prezentace - Vysoke Skoly',
 			'https://docs.google.com/presentation/d/1jDIsVeKMQFI2yHZraYj1n7pwvPNP96t_EIwoiNrW0VM/edit?usp=sharing'
+		],
+		[
+			'CJ Prezentace - Brno',
+			'https://docs.google.com/presentation/d/1Kcsz0axR2VZ5xry6LVEcuyOww1_vjPOwnTM0iwq6eBY/edit?usp=sharing'
 		]
 	];
 
