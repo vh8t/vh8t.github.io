@@ -1,6 +1,7 @@
 export type BlockType = 'hero' | 'vertical' | 'horizontal' | 'soldier';
 
 export interface Block {
+	id: string;
 	type: BlockType;
 	x: number;
 	y: number;

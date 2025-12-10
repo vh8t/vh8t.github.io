@@ -178,7 +178,7 @@
 	<div class="space-y-2 text-center">
 		<h1 class="text-3xl font-bold tracking-tight">Klotski</h1>
 		<p class="text-muted-foreground">
-			Slide the <span class="font-semibold text-primary">White Block</span> to the exit.
+			Slide the <span class="font-semibold text-primary">👑 Block</span> to the exit.
 		</p>
 	</div>
 
