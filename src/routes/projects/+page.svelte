@@ -8,32 +8,45 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Button } from '$lib/components/ui/button';
 	import { Badge } from '$lib/components/ui/badge';
-	import { Github, Search } from '@lucide/svelte';
+	import { Github, Search, Globe } from '@lucide/svelte';
+
+	type ProjectType = 'github' | 'web';
 
 	interface Project {
+		type: ProjectType;
 		name: string;
 		desc: string;
 		url: string;
 		tags: string[];
 	}
 
-	const project = (name: string, desc: string, url: string, ...tags: string[]) => ({
+	const gitProject = (name: string, desc: string, url: string, ...tags: string[]): Project => ({
+		type: 'github',
 		name,
 		desc,
 		url: 'https://github.com/vh8t/' + url,
 		tags
 	});
+	const webProject = (name: string, desc: string, url: string, ...tags: string[]): Project => ({
+		type: 'web',
+		name,
+		desc,
+		url: 'https://vh8t.xyz/' + url,
+		tags
+	});
 
 	const projects: Project[] = [
-		project('Xylia', 'Hobby programming language written in C', 'xylia', 'C', 'Compiler'),
-		project('TMax', 'A declarative and composable tmux wrapper', 'tmax', 'Bash', 'CLI'),
-		project(
+		gitProject('Xylia', 'Hobby programming language written in C', 'xylia', 'C', 'Compiler'),
+		gitProject('TMax', 'A declarative and composable tmux wrapper', 'tmax', 'Bash', 'CLI'),
+		gitProject(
 			'Spotlight++',
 			'Keyboard-driven application launcher for Linux systems',
 			'spotlightpp',
 			'C++',
 			'Linux'
-		)
+		),
+		webProject('Klotski', 'Web based game of klotski', 'klotski', 'Web'),
+		webProject('Notes', 'Simple web based note taking app', 'notes', 'Web')
 	];
 
 	let searchQuery = $state('');
@@ -87,8 +100,13 @@
 				variant="default"
 				class="w-full"
 			>
-				<Github class="mr-2 h-4 w-4" />
-				View on GitHub
+				{#if project.type === 'github'}
+					<Github class="mr-2 h-4 w-4" />
+					View on GitHub
+				{:else if project.type === 'web'}
+					<Globe class="mr-2 h-4 w-4" />
+					View on web
+				{/if}
 			</Button>
 		</Card.Footer>
 	</Card.Root>
