@@ -92,7 +92,7 @@ export default function middleware(request: Request) {
 					p.tags.reduce((acc: number, curr: string): number => acc + curr.length + 3, 0) - 1;
 
 				projectBody += `    ${darkGray}│  ${white}${id} ${title(p.name)} ${darkGray}${'.'.repeat(14 - p.name.length)} ${lightGray}${p.desc.padEnd(42, ' ')}   ${darkGray}│${reset}\n`;
-				projectBody += `    ${darkGray}│       ${darkGray}│               ${darkWhite}URL: ${lightGray}${p.url.padEnd(37, ' ')}   ${darkGray}│${reset}\n`;
+				projectBody += `    ${darkGray}│       ${darkGray}╷               ${darkWhite}URL: ${lightGray}${p.url.padEnd(37, ' ')}   ${darkGray}│${reset}\n`;
 				projectBody += `    ${darkGray}│       ${darkGray}└───> ${tags}${' '.repeat(52 - rawTagsLen)}   ${darkGray}│${reset}\n`;
 				projectBody += `    ${darkGray}│                                                                    │${reset}\n`;
 			});
