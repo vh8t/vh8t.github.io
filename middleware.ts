@@ -10,7 +10,9 @@ export default function middleware(request: Request) {
 		});
 	}
 
-	return next();
+	return new Response(null, {
+		headers: { 'x-middleware-next': '1' }
+	});
 }
 
 export const config = {
