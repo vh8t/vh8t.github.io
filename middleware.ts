@@ -28,7 +28,7 @@ export default function middleware(request: Request) {
 			},
 			{
 				name: 'Spotlight++',
-				desc: 'Keyboard-driven application launcher for Linux systems',
+				desc: 'Keyboard-driven application launcher',
 				url: 'https://github.com/vh8t/spotlightpp',
 				tags: ['C++', 'Linux']
 			},
