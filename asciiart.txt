@@ -1,0 +1,17 @@
+╭────────────────────────────────────────────────────────────────────╮
+│                                                                    │
+│      ,────,        Samuel Golis                                    │
+│     ╱      ╲       Focusing on C and C++, low-level programming,   │
+│     ▏  Λʌ  ▕       and performance-oriented systems.               │
+│     ╲      ╱                                                       │
+│      '────'        [ vh8t.xyz/projects ]                           │
+│                                                                    │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                                                                    │
+│   About                                                            │
+│   I am a student specializing in systems programming. I enjoy      │
+│   writing clean, efficient code primarily in C/C++, with a focus   │
+│   on low-level architecture and performance. I also utilize Go     │
+│   for tooling.                                                     │
+│                                                                    │
+╰────────────────────────────────────────────────────────────────────╯
