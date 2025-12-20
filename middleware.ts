@@ -7,6 +7,8 @@ export default function middleware(request: Request) {
 		const darkWhite = '\x1b[38;2;220;220;220m';
 		const lightGray = '\x1b[38;2;160;160;160m';
 		const darkGray = '\x1b[38;2;64;64;64m';
+		const green = '\x1b[38;2;80;250;123m';
+		const orange = '\x1b[38;2;255;184;108m';
 		const bold = '\x1b[1m';
 		const reset = '\x1b[0m';
 
@@ -128,6 +130,82 @@ ${projectBody}    ${darkGray}╰────────────────
 `;
 
 			return new Response(contactPage + getLegend(), {
+				status: 200,
+				headers: {
+					'content-type': 'text/plain; charset=utf-8',
+					'cache-control': 'no-cache'
+				}
+			});
+		} else if (url.pathname === '/man') {
+			const manPage = `
+${bold}${white}SAMUEL(1)                     User Commands                     SAMUEL(1)${reset}
+
+${bold}${white}NAME${reset}
+     samuel - systems programmer and C++ enthusiast
+
+${bold}${white}SYNOPSIS${reset}
+     ${bold}${white}samuel${reset} [--level=${highlight('low')}${reset} [--language=${highlight('cpp|c|go')}]
+
+${bold}${white}DESCRIPTION${reset}
+     A student specializing in high-performance systems and clean 
+     architecture. Known for avoiding garbage collection where possible.
+
+${bold}${white}AUTHORS${reset}
+     Written by Samuel Golis.
+`;
+
+			return new Response(manPage, {
+				status: 200,
+				headers: {
+					'content-type': 'text/plain; charset=utf-8',
+					'cache-control': 'no-cache'
+				}
+			});
+		} else if (url.pathname === '/neofetch') {
+			const neofetchPage = `
+${white}              ${title('samuel@vh8t')}
+${white}    ,────,    ${darkGray}--------------${reset}
+${white}   ╱      ╲   ${white}OS: ${lightGray}Arch Linux${reset}
+${white}   ▏  Λʌ  ▕   ${white}Kernel: ${lightGray}C++23 / C11${reset}
+${white}   ╲      ╱   ${white}Shell: ${lightGray}zsh${reset}
+${white}    '────'    ${white}Editor: ${lightGray}Neovim${reset}
+${white}              ${white}Uptime: ${lightGray}18 years${reset}
+`;
+
+			return new Response(neofetchPage, {
+				status: 200,
+				headers: {
+					'content-type': 'text/plain; charset=utf-8',
+					'cache-control': 'no-cache'
+				}
+			});
+		} else if (url.pathname === '/panic') {
+			const panicPage = `
+${bold}${white}[    0.000000] Linux version 6.x.x-vh8t (gcc version 13.2.1)${reset}
+${bold}${white}[    0.000001] Command line: root=/dev/sda1 init=/sbin/samuel_init${reset}
+${bold}${white}[    0.000420] <0> ---[ end Kernel panic - not syncing: VFS: Unable to mount root fs ]---${reset}
+
+${lightGray}Just kidding. Everything is fine.${reset}
+${lightGray}Try ${highlight('curl -L vh8t.xyz')} to get back safely.${reset}
+`;
+
+			return new Response(panicPage, {
+				status: 200,
+				headers: {
+					'content-type': 'text/plain; charset=utf-8',
+					'cache-control': 'no-cache'
+				}
+			});
+		} else if (url.pathname === '/logs') {
+			const logsPage = `
+${darkGray}[${green}OK  ${darkGray}] ${white}Initialized coffee_driver.sys${reset}
+${darkGray}[${orange}WARN${darkGray}] ${white}Memory leak detected in social_skills.cpp${reset}
+${darkGray}[${green}OK  ${darkGray}] ${white}Loaded project_xylia.so${reset}
+
+${lightGray}Log stream paused. Press ${highlight('Ctrl+C')} to exit (or just stop curling).${reset}
+`;
+
+			return new Response(logsPage, {
 				status: 200,
 				headers: {
 					'content-type': 'text/plain; charset=utf-8',
