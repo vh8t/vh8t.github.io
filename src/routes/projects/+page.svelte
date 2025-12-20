@@ -36,7 +36,7 @@
 	});
 
 	const projects: Project[] = [
-		gitProject('Xylia', 'Hobby programming language written in C', 'xylia', 'C', 'Compiler'),
+		gitProject('Xylia', 'Hobby programming language written in C', 'xylia', 'C', 'Interpreter'),
 		gitProject('TMax', 'A declarative and composable tmux wrapper', 'tmax', 'Bash', 'CLI'),
 		gitProject(
 			'Spotlight++',

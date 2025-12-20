@@ -15,3 +15,25 @@
 │   for tooling.                                                     │
 │                                                                    │
 ╰────────────────────────────────────────────────────────────────────╯
+
+
+
+╭─────────────────────────────────────────────────────────────────────╮
+│   Projects                                                          │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│                                                                     │
+│   [01] Xylia ....... Hobby porgamming language written in C         │
+│        │               Focus on memory management & task switching  │
+│        └───> [xylia] [c] [interpreter]                              │
+│                                                                     │
+│   [02] fast-parser ... High-performance SIMD-accelerated JSON       │
+│        │               parser optimized for low-latency systems     │
+│        └───> [C] [SIMD]                                             │
+│                                                                     │
+│   [03] go-cli-tool ... System monitoring utility for Unix-like      │
+│        │               environments with real-time telemetry        │
+│        └───> [Go]                                                   │
+│                                                                     │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│   (Use 'curl vh8t.xyz/project-name' for details)                    │
+╰─────────────────────────────────────────────────────────────────────╯
