@@ -52,7 +52,7 @@ export default function middleware(request: Request) {
   ${darkWhite}ROUTES:${reset}
     ${white}/ ${darkGray}.......... ${lightGray}Home (Profile & About)${reset}
     ${white}/projects ${darkGray}.. ${lightGray}Portfolio of systems & web work${reset}
-    ${white}/contact ${darkGray}... ${lightGray}Social links & Email${reset}
+    ${white}/contact ${darkGray}... ${lightGray}Social links${reset}
 `;
 
 		if (url.pathname === '/') {
