@@ -1,5 +1,3 @@
-import { next } from '@vercel/edge';
-
 export default function middleware(request: Request) {
 	const userAgent = request.headers.get('user-agent') || '';
 
