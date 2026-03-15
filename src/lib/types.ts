@@ -16,3 +16,15 @@ export interface GameState {
 }
 
 export type Level = Block[];
+
+export type CubeType = '2x2' | '3x3';
+
+export interface Solve {
+	id: string;
+	time: number;
+	cube: CubeType;
+	scramble: string;
+	timestamp: number;
+	penalty: boolean;
+	dnf: boolean;
+}
