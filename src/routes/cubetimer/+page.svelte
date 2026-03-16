@@ -9,8 +9,6 @@
 	import * as Table from '$lib/components/ui/table';
 	import { Button } from '$lib/components/ui/button';
 
-	import 'cubing/twisty';
-
 	import {
 		RefreshCw,
 		Trash2,
@@ -209,12 +207,15 @@
 	);
 
 	onMount(async () => {
+		await import('cubing/twisty');
+
 		current_cube = (localStorage.getItem(CUBE_STORAGE_KEY) as CubeType) || '3x3';
+		is_mounted = true;
+
 		const dark_mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
 		if (dark_mode && dark_mode.matches) {
 			document.documentElement.classList.add('dark');
 		}
-		is_mounted = true;
 	});
 </script>
 
