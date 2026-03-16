@@ -4,7 +4,16 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	worker: {
+		format: 'es'
+	},
+	build: {
+		target: 'es2022'
+	},
 	optimizeDeps: {
-		exclude: ['cubing']
+		exclude: ['cubing'],
+		esbuildOptions: {
+			target: 'es2022'
+		}
 	}
 });
