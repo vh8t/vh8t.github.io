@@ -1,5 +1,6 @@
 import { randomScrambleForEvent } from 'cubing/scramble';
 import type { CubeType } from './types';
+import { browser } from '$app/environment';
 
 const queues: Record<CubeType, string[]> = {
 	'3x3': [],
@@ -32,8 +33,10 @@ async function refill_queue(cube: CubeType) {
 	is_refilling[cube] = false;
 }
 
-refill_queue('3x3');
-refill_queue('2x2');
+if (browser) {
+	refill_queue('3x3');
+	refill_queue('2x2');
+}
 
 export async function generate_scramble(cube: CubeType): Promise<string> {
 	refill_queue(cube);
