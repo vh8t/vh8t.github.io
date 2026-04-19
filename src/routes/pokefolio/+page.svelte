@@ -50,6 +50,13 @@
 	let isSearching = $state(false);
 	let hasSearched = $state(false);
 	let showWipeAlert = $state(false);
+	let fullSelectedCard = $state<SDKCard | null>(null);
+	let isLoadingModalData = $state(false);
+
+	const modalDisplayPrice = $derived.by(() => {
+		if (!fullSelectedCard) return 0;
+		return getPriceValue(fullSelectedCard, selectedVariant, selectedCondition);
+	});
 
 	const totalValue = $derived.by(() => {
 		return portfolio.reduce((sum, card) => {
@@ -96,6 +103,23 @@
 		};
 
 		return base * (multipliers[condition] || 1);
+	};
+
+	const variantToString = (variant: CardVariant): string => {
+		if (variant === 'normal') return 'Normal';
+		if (variant === 'holo') return 'Holofoil';
+		if (variant === 'reverse') return 'Reverse Holofoil';
+		if (variant === 'first-edition') return '1st Edition';
+		return '???';
+	};
+
+	const conditionToString = (condition: CardCondition): string => {
+		if (condition === 'NM') return 'Near Mint (NM)';
+		if (condition === 'LP') return 'Lightly Played (LP)';
+		if (condition === 'MP') return 'Moderately Played (MP)';
+		if (condition === 'HP') return 'Heavily Played (HP)';
+		if (condition === 'DM') return 'Damaged (DM)';
+		return '';
 	};
 
 	const exportData = () => {
@@ -173,11 +197,21 @@
 		}
 	};
 
-	const openAddModal = (card: CardResume) => {
+	const openAddModal = async (card: CardResume) => {
 		selectedCard = card;
+		fullSelectedCard = null;
 		selectedVariant = 'normal';
 		selectedCondition = 'NM';
 		isModalOpen = true;
+
+		isLoadingModalData = true;
+		try {
+			fullSelectedCard = await tcgdex.card.get(card.id);
+		} catch (error) {
+			console.error('Failed to fetch full card data:', error);
+		} finally {
+			isLoadingModalData = false;
+		}
 	};
 
 	const confirmAddCard = () => {
@@ -502,7 +536,7 @@
 												>
 													<div class="flex items-center gap-1.5 overflow-hidden pr-2">
 														<span class="truncate font-medium uppercase opacity-75">
-															{inst.v.replace('-', ' ')}
+															{variantToString(inst.v)}
 														</span>
 														{#if instancePrice > 0}
 															<span class="text-[8.5px] font-medium text-muted-foreground/70">
@@ -712,22 +746,48 @@
 		<Dialog.Content class="max-w-425px w-[90vw]">
 			<Dialog.Header>
 				<Dialog.Title>Add to Collection</Dialog.Title>
-				<Dialog.Description class="truncate">
-					{selectedCard?.name} ({selectedCard?.id})
+				<Dialog.Description class="flex items-center gap-2">
+					<span class="truncate font-bold text-foreground">{selectedCard?.name}</span>
+					{#if fullSelectedCard}
+						<span class="text-xs opacity-70">
+							{fullSelectedCard.set.name} · {fullSelectedCard.localId}/{fullSelectedCard.set
+								.cardCount.official}
+						</span>
+					{/if}
 				</Dialog.Description>
 			</Dialog.Header>
 
 			<div class="grid gap-4 py-4">
+				<div class="flex items-center justify-between bg-secondary/30 p-3">
+					<div class="flex flex-col">
+						<span class="text-[10px] font-bold tracking-wider text-muted-foreground uppercase">
+							Estimated Value
+						</span>
+						{#if isLoadingModalData}
+							<CircleNotchIcon size={16} class="mt-1 animate-spin opacity-40" />
+						{:else}
+							<span class="text-xl font-black text-emerald-600 dark:text-emerald-400">
+								€{modalDisplayPrice.toFixed(2)}
+							</span>
+						{/if}
+					</div>
+					{#if fullSelectedCard?.rarity}
+						<Badge variant="outline" class="h-fit py-0 text-[10px] uppercase">
+							{fullSelectedCard.rarity}
+						</Badge>
+					{/if}
+				</div>
+
 				<div class="flex flex-col gap-2">
 					<label for="variant" class="text-sm font-medium">Variant</label>
 					<Select.Root type="single" bind:value={selectedVariant}>
 						<Select.Trigger id="variant" class="w-full">
-							{selectedVariant}
+							{variantToString(selectedVariant)}
 						</Select.Trigger>
 						<Select.Content>
 							<Select.Item value="normal">Normal</Select.Item>
-							<Select.Item value="holo">Holo</Select.Item>
-							<Select.Item value="reverse">Reverse Holo</Select.Item>
+							<Select.Item value="holo">Holofoil</Select.Item>
+							<Select.Item value="reverse">Reverse Holofoil</Select.Item>
 							<Select.Item value="first-edition">1st Edition</Select.Item>
 						</Select.Content>
 					</Select.Root>
@@ -737,7 +797,7 @@
 					<label for="condition" class="text-sm font-medium">Condition</label>
 					<Select.Root type="single" bind:value={selectedCondition}>
 						<Select.Trigger id="condition" class="w-full">
-							{selectedCondition}
+							{conditionToString(selectedCondition)}
 						</Select.Trigger>
 						<Select.Content>
 							<Select.Item value="NM">Near Mint (NM)</Select.Item>
@@ -751,7 +811,9 @@
 			</div>
 
 			<Dialog.Footer>
-				<Button onclick={confirmAddCard} class="w-full font-bold">Add Card</Button>
+				<Button onclick={confirmAddCard} class="w-full font-bold" disabled={isLoadingModalData}>
+					{isLoadingModalData ? 'Loading Data...' : 'Add to Collection'}
+				</Button>
 			</Dialog.Footer>
 		</Dialog.Content>
 	</Dialog.Root>
