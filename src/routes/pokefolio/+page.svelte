@@ -442,7 +442,7 @@
 
 							<Card.Root class="relative overflow-hidden border-none bg-secondary/30 p-0 shadow-sm">
 								<Badge
-									class="absolute top-2 right-2 z-10 px-1.5 py-0 text-[10px] font-bold shadow-sm"
+									class="absolute top-2 right-2 z-5 px-1.5 py-0 text-[10px] font-bold shadow-sm"
 								>
 									x{totalQty}
 								</Badge>
