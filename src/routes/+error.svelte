@@ -4,6 +4,20 @@
 
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		if (darkModeQuery.matches) {
+			document.documentElement.classList.add('dark');
+		}
+
+		const handler = (e: MediaQueryListEvent) =>
+			document.documentElement.classList.toggle('dark', e.matches);
+		darkModeQuery.addEventListener('change', handler);
+
+		return () => darkModeQuery.removeEventListener('change', handler);
+	});
 </script>
 
 <div class="flex min-h-screen flex-col bg-background font-sans antialiased">

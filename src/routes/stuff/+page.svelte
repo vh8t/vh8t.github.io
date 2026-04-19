@@ -6,6 +6,7 @@
 
 	import { fade } from 'svelte/transition';
 	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
 
 	let counter: number = $state(0);
 	let show: boolean = $derived(counter >= 5);
@@ -57,6 +58,19 @@
 			}, 2000);
 		}
 	};
+
+	onMount(() => {
+		const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		if (darkModeQuery.matches) {
+			document.documentElement.classList.add('dark');
+		}
+
+		const handler = (e: MediaQueryListEvent) =>
+			document.documentElement.classList.toggle('dark', e.matches);
+		darkModeQuery.addEventListener('change', handler);
+
+		return () => darkModeQuery.removeEventListener('change', handler);
+	});
 </script>
 
 <div class="flex min-h-screen flex-col bg-background font-sans antialiased">
