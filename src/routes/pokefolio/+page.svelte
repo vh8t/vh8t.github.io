@@ -52,6 +52,8 @@
 	let showWipeAlert = $state(false);
 	let fullSelectedCard = $state<SDKCard | null>(null);
 	let isLoadingModalData = $state(false);
+	let previewCard = $state<SDKCard | null>(null);
+	let isPreviewOpen = $state(false);
 
 	const modalDisplayPrice = $derived.by(() => {
 		if (!fullSelectedCard) return 0;
@@ -195,6 +197,11 @@
 				portfolio = portfolio.filter((c) => c.id !== cardId);
 			}
 		}
+	};
+
+	const openPreview = (card: SDKCard) => {
+		previewCard = card;
+		isPreviewOpen = true;
 	};
 
 	const openAddModal = async (card: CardResume) => {
@@ -482,8 +489,9 @@
 								</Badge>
 
 								<Card.Content class="p-0">
-									<div
+									<button
 										class="relative flex aspect-2.5/3.5 w-full items-center justify-center overflow-hidden bg-muted"
+										onclick={() => openPreview(card)}
 									>
 										{#if !brokenImages.has(card.id) && card.image}
 											<img
@@ -503,7 +511,7 @@
 												</span>
 											</div>
 										{/if}
-									</div>
+									</button>
 
 									<div class="flex flex-col gap-2 p-3">
 										<div class="flex items-start justify-between gap-2">
@@ -562,7 +570,10 @@
 
 														<button
 															class="flex h-5 w-5 items-center justify-center text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive active:scale-95"
-															onclick={() => removeCardInstance(card.id, inst.v, inst.c)}
+															onclick={(e) => {
+																e.stopPropagation();
+																removeCardInstance(card.id, inst.v, inst.c);
+															}}
 															aria-label="Remove card"
 														>
 															{#if inst.q > 1}
@@ -815,6 +826,63 @@
 					{isLoadingModalData ? 'Loading Data...' : 'Add to Collection'}
 				</Button>
 			</Dialog.Footer>
+		</Dialog.Content>
+	</Dialog.Root>
+
+	<Dialog.Root bind:open={isPreviewOpen}>
+		<Dialog.Content class="sm:max-w-450px max-w-[95vw] overflow-hidden border-none bg-card p-0">
+			{#if previewCard}
+				<div class="relative aspect-2.5/3.5 w-full bg-muted">
+					<img
+						src="{previewCard.image}/high.webp"
+						alt={previewCard.name}
+						class="h-full w-full object-contain"
+					/>
+				</div>
+
+				<div class="space-y-4 p-6">
+					<div class="flex items-center justify-between">
+						<div>
+							<Dialog.Header class="text-left">
+								<Dialog.Title class="text-xl font-bold">{previewCard.name}</Dialog.Title>
+								<Dialog.Description class="text-sm font-medium text-primary">
+									{previewCard.set.name} · {previewCard.localId}/{previewCard.set.cardCount
+										.official}
+								</Dialog.Description>
+							</Dialog.Header>
+						</div>
+						<Badge variant="outline" class="font-bold tracking-tighter uppercase">
+							{previewCard.rarity}
+						</Badge>
+					</div>
+
+					<div class="grid grid-cols-2 gap-4 border-y border-border/50 py-4">
+						<div class="space-y-1">
+							<p class="text-[10px] font-bold text-muted-foreground uppercase">Illustrator</p>
+							<p class="text-sm font-medium">{previewCard.illustrator || 'Unknown'}</p>
+						</div>
+						<div class="space-y-1">
+							<p class="text-[10px] font-bold text-muted-foreground uppercase">Category</p>
+							<p class="text-sm font-medium">{previewCard.category}</p>
+						</div>
+					</div>
+
+					<div class="flex items-center justify-between pt-2">
+						<div class="flex flex-col">
+							<span class="text-[10px] font-bold text-muted-foreground uppercase">
+								Market Trend (EU)
+							</span>
+							<span class="text-lg font-black text-emerald-600 dark:text-emerald-400">
+								€{// @ts-expect-error the API returns pricing but was not updated properly in the types
+								previewCard.pricing?.cardmarket.trend?.toFixed(2) || '0.00'}
+							</span>
+						</div>
+						<Button variant="outline" size="sm" onclick={() => (isPreviewOpen = false)}>
+							Close
+						</Button>
+					</div>
+				</div>
+			{/if}
 		</Dialog.Content>
 	</Dialog.Root>
 
