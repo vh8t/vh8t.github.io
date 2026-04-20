@@ -120,12 +120,12 @@
 	};
 
 	const conditionToString = (condition: CardCondition): string => {
-		if (condition === 'NM') return 'Near Mint (NM)';
-		if (condition === 'LP') return 'Lightly Played (LP)';
-		if (condition === 'MP') return 'Moderately Played (MP)';
-		if (condition === 'HP') return 'Heavily Played (HP)';
-		if (condition === 'DM') return 'Damaged (DM)';
-		return '';
+		if (condition === 'NM') return 'Near Mint';
+		if (condition === 'LP') return 'Lightly Played';
+		if (condition === 'MP') return 'Moderately Played';
+		if (condition === 'HP') return 'Heavily Played';
+		if (condition === 'DM') return 'Damaged';
+		return '???';
 	};
 
 	const exportData = () => {
