@@ -92,9 +92,13 @@
 		if (!pricing) return 0;
 
 		const isHolo = variant === 'holo' || variant === 'reverse';
-		const base = isHolo
-			? pricing['trend-holo'] || pricing['avg-holo'] || pricing.trend || 0
-			: pricing.trend || pricing.avg || 0;
+		const holoTrend = pricing['trend-holo'] || pricing['avg-holo'] || 0;
+		const generalTrend = pricing.trend || pricing.avg || 0;
+
+		let base = generalTrend;
+		if (isHolo) {
+			base = holoTrend > generalTrend * 0.8 ? holoTrend : generalTrend;
+		}
 
 		const multipliers: Record<string, number> = {
 			NM: 1,
