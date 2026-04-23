@@ -30,6 +30,10 @@
 			url: 'https://docs.google.com/presentation/d/1Kcsz0axR2VZ5xry6LVEcuyOww1_vjPOwnTM0iwq6eBY/edit?usp=sharing'
 		},
 		{
+			text: 'CJ Prezentace - Post-Black Metal',
+			url: 'https://docs.google.com/presentation/d/1lgSBPHHGT2_1W4AFzsECedYY58DEHS3y2TkKvAovwJA/edit?usp=sharing'
+		},
+		{
 			text: 'OBN Prezentace - Geopolitický spor o Čagoské ostrovy',
 			url: 'https://docs.google.com/presentation/d/1_rPkgqpemKPl3HpWCfpB-hPu5ouKI1qaPQGISLkQZQ4/edit?usp=sharing'
 		},
