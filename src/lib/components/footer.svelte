@@ -4,6 +4,7 @@
 	const year = new Date().getFullYear();
 	const links = {
 		GitHub: 'https://github.com/vh8t',
+		Codeberd: 'https://codeberg.org/vh8t',
 		Instagram: 'https://instagram.com/golis.sam'
 	};
 </script>
